@@ -14,7 +14,7 @@ namespace Project_ATBM
     public partial class QLyUser : Form
     {
         string connectionString = @"Data Source=(DESCRIPTION =
-            (ADDRESS = (PROTOCOL = TCP)(HOST = DESKTOP-ONG9HE4)(PORT = 1521))
+            (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))
             (CONNECT_DATA =
               (SERVER = DEDICATED)
               (SERVICE_NAME = XE)
