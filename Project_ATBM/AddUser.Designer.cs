@@ -44,6 +44,7 @@
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(236, 35);
             this.txtusername.TabIndex = 1;
+            this.txtusername.TextChanged += new System.EventHandler(this.txtusername_TextChanged);
             // 
             // txtpassword
             // 
@@ -53,6 +54,7 @@
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.Size = new System.Drawing.Size(236, 35);
             this.txtpassword.TabIndex = 2;
+            this.txtpassword.TextChanged += new System.EventHandler(this.txtpassword_TextChanged);
             // 
             // label1
             // 
@@ -72,6 +74,7 @@
             this.label2.Size = new System.Drawing.Size(120, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Nhập Password";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button_add_user
             // 
