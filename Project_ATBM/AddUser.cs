@@ -88,8 +88,22 @@ namespace Project_ATBM
 
         private void button1_Click(object sender, EventArgs e)
         {
-            QLyUser form = new QLyUser();
-            form.Show();
+            this.Close();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtpassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtusername_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
