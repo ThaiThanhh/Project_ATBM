@@ -57,5 +57,11 @@ namespace Project_ATBM
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddUser form = new AddUser();
+            form.Show();
+        }
     }
 }
