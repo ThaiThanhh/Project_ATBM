@@ -170,7 +170,7 @@ namespace Project_ATBM
             int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
             DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
             string cellValue = Convert.ToString(selectedRow.Cells["USERNAME"].Value);
-            ViewPrivsUser form = new ViewPrivsUser(cellValue);
+            PrivsManage form = new PrivsManage(cellValue);
             form.Show();
            
         }
