@@ -116,6 +116,12 @@
     <Compile Include="QLyUser.Designer.cs">
       <DependentUpon>QLyUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewPrivsUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewPrivsUser.Designer.cs">
+      <DependentUpon>ViewPrivsUser.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +145,9 @@
     </Compile>
     <EmbeddedResource Include="QLyUser.resx">
       <DependentUpon>QLyUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPrivsUser.resx">
+      <DependentUpon>ViewPrivsUser.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>

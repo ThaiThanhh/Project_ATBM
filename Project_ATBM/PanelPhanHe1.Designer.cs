@@ -89,6 +89,7 @@
             this.Name = "PanelPhanHe1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Panel Phân Hệ 1";
+            this.Load += new System.EventHandler(this.PanelPhanHe1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
