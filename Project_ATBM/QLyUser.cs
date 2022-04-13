@@ -167,17 +167,12 @@ namespace Project_ATBM
 
         private void button6_Click(object sender, EventArgs e)
         {
-            //get clicked cell value
             int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
             DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
             string cellValue = Convert.ToString(selectedRow.Cells["USERNAME"].Value);
-
-            OracleConnection con = new OracleConnection();
-            con.ConnectionString = connectionString;
-            con.Open();
-
-            PrivsManage form = new PrivsManage(cellValue);
+            ViewPrivsUser form = new ViewPrivsUser(cellValue);
             form.Show();
+           
         }
     }
 }

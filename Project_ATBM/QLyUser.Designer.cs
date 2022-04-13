@@ -115,11 +115,11 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(68, 282);
+            this.button6.Location = new System.Drawing.Point(68, 280);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(131, 50);
+            this.button6.Size = new System.Drawing.Size(216, 47);
             this.button6.TabIndex = 17;
-            this.button6.Text = "Xem quyền";
+            this.button6.Text = "Xem danh sách quyền";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
