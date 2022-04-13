@@ -9,11 +9,32 @@ begin
 end;
 /
 
---Procedure tạo role tên là role_name
-create or replace procedure Create_Role(role_name in varchar2)
+--Procedure tạo role tên là role_name và _identity: được xử lý ở phần giao diện
+--  _identity = 'not identified' if no indentity else 'identified by ' || identity_mode(password, schema, externally, ...)
+create or replace procedure Create_Role(role_name in varchar2, identity_mode in varchar2)
+is
+    role_name_existed exception;
+    n_row_existed int;
+begin
+    select count(*) into n_row_existed
+    from DBA_ROLES
+    where role = role_name;
+    
+    if n_row_existed != 0 then 
+        raise role_name_existed;
+    end if;
+
+    execute immediate 'create role ' || role_name || ' ' || identity_mode;
+end;
+/
+
+--Procedure chỉnh sửa role tên là role_name và _identity: được xử lý ở phần giao diện
+--  _identity = 'not identified' if no indentity else 'identified by ' || identity_mode(password, schema, ...)
+--Note: Phép alter không có đổi tên cho role
+create or replace procedure Alter_Role(role_name in varchar2, identity_mode in varchar2)
 is
 begin
-    execute immediate 'create role ' || role_name;
+    execute immediate 'alter role ' || role_name || ' ' || identity_mode;
 end;
 /
 
