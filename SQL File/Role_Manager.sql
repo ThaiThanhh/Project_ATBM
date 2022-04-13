@@ -24,6 +24,14 @@ begin
 end;
 /
 
+--Procedure cấp quyền priv_name trên đối tượng dữ liệu obj ra khỏi role_name
+create or replace procedure Grant_Privs_To_Role(role_name in varchar2, privs_name in varchar2, obj in varchar2)
+is
+begin
+    execute immediate 'grant ' || privs_name || ' on ' || obj || ' to ' || role_name;
+end;
+/
+
 --Procedure truất quyền priv_name trên đối tượng dữ liệu obj ra khỏi role_name
 create or replace procedure Revoke_Role_Privs(role_name in varchar2, priv_name in varchar2, obj in varchar2)
 is
