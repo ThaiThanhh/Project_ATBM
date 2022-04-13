@@ -164,5 +164,46 @@ namespace Project_ATBM
             EditUser form = new EditUser();
             form.Show();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string user_name = textBox_view_privs.Text.Trim().ToUpper();
+
+            OracleConnection con = new OracleConnection();
+            con.ConnectionString = connectionString;
+            con.Open();
+
+            try
+            {
+                OracleCommand cmd_drop_user = new OracleCommand();
+                cmd_drop_user.Connection = con;
+                cmd_drop_user.CommandText = "proc_privs_information";
+                cmd_drop_user.CommandType = CommandType.StoredProcedure;
+                cmd_drop_user.Parameters.Add(new OracleParameter("user_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = user_name;
+                OracleDataReader user = cmd_drop_user.ExecuteReader();
+                DataTable tableUserList = new DataTable();
+
+                tableUserList.Load(user);
+
+                dataGridView1.DataSource = tableUserList;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            GrantPrivilegetoUser form = new GrantPrivilegetoUser();
+            form.Show();
+        }
     }
 }

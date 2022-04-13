@@ -35,6 +35,9 @@
             this.txtusername_search = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.textBox_view_privs = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,9 +115,42 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // textBox_view_privs
+            // 
+            this.textBox_view_privs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_view_privs.Location = new System.Drawing.Point(70, 280);
+            this.textBox_view_privs.Name = "textBox_view_privs";
+            this.textBox_view_privs.Size = new System.Drawing.Size(236, 35);
+            this.textBox_view_privs.TabIndex = 17;
+            this.textBox_view_privs.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(323, 274);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(116, 46);
+            this.button6.TabIndex = 18;
+            this.button6.Text = "Xem quyền";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(70, 350);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(93, 49);
+            this.button7.TabIndex = 19;
+            this.button7.Text = "Cấp quyền";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // QLyUser
             // 
             this.ClientSize = new System.Drawing.Size(1178, 544);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.textBox_view_privs);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.txtusername_search);
@@ -138,5 +174,8 @@
         private System.Windows.Forms.TextBox txtusername_search;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox_view_privs;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }
