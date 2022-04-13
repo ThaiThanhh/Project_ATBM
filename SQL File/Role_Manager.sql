@@ -1,10 +1,11 @@
 --Procedure xem quyền của role trên các đối tượng dữ liệu
-create or replace procedure View_Role_Privileges
+create or replace procedure View_Role_Privileges(rlt_tab out sys_refcursor)
 is
 begin
-    select ROLE_TAB_PRIVS.role as "Nhóm người dùng", table_name as "Tên bảng", column_name as "Tên cột", privilege "Quyền"
-    from ROLE_TAB_PRIVS join DBA_ROLES on ROLE_TAB_PRIVS.role = DBA_ROLES.role
-    where DBA_ROLES.oracle_maintained = 'N';
+    open rlt_tab for
+        select ROLE_TAB_PRIVS.role as "Nhóm người dùng", table_name as "Tên bảng", column_name as "Tên cột", privilege "Quyền"
+        from ROLE_TAB_PRIVS join DBA_ROLES on ROLE_TAB_PRIVS.role = DBA_ROLES.role
+        where DBA_ROLES.oracle_maintained = 'N';
 end;
 /
 
