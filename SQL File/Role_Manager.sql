@@ -25,6 +25,7 @@ begin
     end if;
 
     execute immediate 'create role ' || role_name || ' ' || identity_mode;
+    
 end;
 /
 
@@ -53,6 +54,8 @@ begin
     execute immediate 'grant ' || privs_name || ' on ' || obj || ' to ' || role_name;
 end;
 /
+
+grant select on PhieuMuonSach to c##docgia with grant option;
 
 --Procedure truất quyền priv_name trên đối tượng dữ liệu obj ra khỏi role_name
 create or replace procedure Revoke_Role_Privs(role_name in varchar2, priv_name in varchar2, obj in varchar2)
