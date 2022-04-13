@@ -18,7 +18,7 @@ namespace Project_ATBM
               (SERVER = DEDICATED)
               (SERVICE_NAME = XE)
             )
-            );DBA Privilege=SYSDBA; User Id = SYS;password=1";
+            );DBA Privilege=SYSDBA; User Id = SYS;password=5906341";
         public AddUser()
         {
             InitializeComponent();

@@ -19,7 +19,7 @@ namespace Project_ATBM
               (SERVER = DEDICATED)
               (SERVICE_NAME = XE)
             )
-            );DBA Privilege=SYSDBA; User Id = SYS;password=1";
+            );DBA Privilege=SYSDBA; User Id = SYS;password=5906341";
 
         public QLyUser()
         {
@@ -162,6 +162,21 @@ namespace Project_ATBM
         private void button5_Click(object sender, EventArgs e)
         {
             EditUser form = new EditUser();
+            form.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //get clicked cell value
+            int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
+            string cellValue = Convert.ToString(selectedRow.Cells["USERNAME"].Value);
+
+            OracleConnection con = new OracleConnection();
+            con.ConnectionString = connectionString;
+            con.Open();
+
+            PrivsManage form = new PrivsManage(cellValue);
             form.Show();
         }
     }
