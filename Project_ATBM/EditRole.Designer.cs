@@ -51,9 +51,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(84, 108);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 16);
+            this.label2.Size = new System.Drawing.Size(134, 16);
             this.label2.TabIndex = 10;
-            this.label2.Text = "Nhập Password mới";
+            this.label2.Text = "Nhập Role name mới";
             // 
             // txtidentitymode
             // 
@@ -80,9 +80,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(92, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 16);
+            this.label1.Size = new System.Drawing.Size(73, 16);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Username";
+            this.label1.Text = "Role name";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txt_rolename
@@ -107,7 +107,7 @@
             this.Controls.Add(this.txtidentitymode);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "EditRole";
-            this.Text = "EditUser";
+            this.Text = "EditRole";
             this.Load += new System.EventHandler(this.EditRole_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
