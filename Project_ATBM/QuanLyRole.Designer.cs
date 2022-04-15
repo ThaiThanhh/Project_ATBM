@@ -32,9 +32,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.txtrolename_search = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,26 +83,6 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // txtrolename_search
-            // 
-            this.txtrolename_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtrolename_search.Location = new System.Drawing.Point(68, 124);
-            this.txtrolename_search.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtrolename_search.Name = "txtrolename_search";
-            this.txtrolename_search.Size = new System.Drawing.Size(236, 30);
-            this.txtrolename_search.TabIndex = 14;
-            this.txtrolename_search.TextChanged += new System.EventHandler(this.txtusername_search_TextChanged);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(323, 122);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(113, 44);
-            this.button4.TabIndex = 15;
-            this.button4.Text = "Tìm kiếm";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(323, 193);
@@ -113,12 +93,32 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(68, 119);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(180, 50);
+            this.button4.TabIndex = 17;
+            this.button4.Text = "Cấp quyền";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(257, 119);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(180, 50);
+            this.button6.TabIndex = 18;
+            this.button6.Text = "Thu hồi quyền";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button6_Click);
+            // 
             // QuanLyRole
             // 
             this.ClientSize = new System.Drawing.Size(1178, 544);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.txtrolename_search);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -128,7 +128,6 @@
             this.Load += new System.EventHandler(this.QuanLyRole_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
         #endregion
@@ -136,8 +135,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox txtrolename_search;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button6;
     }
 }

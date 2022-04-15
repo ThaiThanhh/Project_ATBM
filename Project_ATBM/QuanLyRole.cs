@@ -130,33 +130,8 @@ namespace Project_ATBM
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //input rolename
-            string role_name = txtrolename_search.Text.Trim().ToUpper();
-
-            OracleConnection con = new OracleConnection();
-            con.ConnectionString = connectionString;
-            con.Open();
-
-            try
-            {
-                //Search Role
-                OracleCommand cmd_drop_user = new OracleCommand();
-                cmd_drop_user.Connection = con;
-                cmd_drop_user.CommandText = "proc_search_user";
-                cmd_drop_user.CommandType = CommandType.StoredProcedure;
-                cmd_drop_user.Parameters.Add(new OracleParameter("role_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = role_name;
-                OracleDataReader user = cmd_drop_user.ExecuteReader();
-                DataTable tableRoleList = new DataTable();
-
-                tableRoleList.Load(user);
-
-                dataGridView1.DataSource = tableRoleList;
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            GrantPrivs form = new GrantPrivs();
+            form.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -165,9 +140,10 @@ namespace Project_ATBM
             form.Show();
         }
 
-        private void txtusername_search_TextChanged(object sender, EventArgs e)
+        private void button6_Click(object sender, EventArgs e)
         {
-
+            EditRole form = new EditRole();
+            form.Show();
         }
     }
 }

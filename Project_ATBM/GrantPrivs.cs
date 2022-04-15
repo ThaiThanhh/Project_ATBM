@@ -11,7 +11,7 @@ using Oracle.ManagedDataAccess.Client;
 
 namespace Project_ATBM
 {
-    public partial class EditRole : Form
+    public partial class GrantPrivs : Form
     {
         string connectionString = @"Data Source=(DESCRIPTION =
             (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))
@@ -20,7 +20,7 @@ namespace Project_ATBM
               (SERVICE_NAME = XE)
             )
             );DBA Privilege=SYSDBA; User Id = SYS;password=oracleqa1409";
-        public EditRole()
+        public GrantPrivs()
         {
             InitializeComponent();
         }
@@ -55,23 +55,22 @@ namespace Project_ATBM
                 //edit role
                 try
                 {
-                    OracleCommand cmd_edit_role = new OracleCommand();
-                    cmd_edit_role.Connection = con;
-                    cmd_edit_role.CommandText = "Alter_Role";
-                    cmd_edit_role.CommandType = CommandType.StoredProcedure;
-                    if (txtidentitymode.Text == null)
+                    OracleCommand cmd_grant_privs = new OracleCommand();
+                    cmd_grant_privs.Connection = con;
+                    cmd_grant_privs.CommandText = "Grant_Privs_To_Role";
+                    cmd_grant_privs.CommandType = CommandType.StoredProcedure;
+                    if (txt_rolename.Text == null)
                     {
-                        cmd_edit_role.Parameters.Add(":rolename", txt_rolename.Text.ToUpper());
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Đã thêm role mới");
+                        MessageBox.Show("Role không tồn tại");
                     }
                     else
                     {
 
-                        cmd_edit_role.Parameters.Add(new OracleParameter("role_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = txt_rolename.Text.ToUpper();
-                        cmd_edit_role.Parameters.Add(new OracleParameter("identity_mode", OracleDbType.Varchar2, ParameterDirection.Input)).Value = txtidentitymode.Text;
-                        cmd_edit_role.ExecuteNonQuery();
-                        MessageBox.Show("Đã chỉnh sửa identity");
+                        cmd_grant_privs.Parameters.Add(new OracleParameter("role_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = txt_rolename.Text.ToUpper();
+                        cmd_grant_privs.Parameters.Add(new OracleParameter("privs_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = txt_privsname.Text;
+                        cmd_grant_privs.Parameters.Add(new OracleParameter("obj", OracleDbType.Varchar2, ParameterDirection.Input)).Value = txt_obj.Text;
+                        cmd_grant_privs.ExecuteNonQuery();
+                        MessageBox.Show("Đã cấp quyền " + txt_privsname.Text.ToUpper() + " cho role " + txt_rolename.Text.ToUpper() + " trên đối tượng " + txt_obj.Text.ToUpper());
                     }
                 }
                 catch (Exception ex)
@@ -82,14 +81,19 @@ namespace Project_ATBM
             con.Close();
         }
 
-        private void EditRole_Load(object sender, EventArgs e)
+        private void GrantPrivs_Load(object sender, EventArgs e)
         {
 
         }
 
-        //private void label1_Click(object sender, EventArgs e)
-        //{
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
 
-        //}
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
