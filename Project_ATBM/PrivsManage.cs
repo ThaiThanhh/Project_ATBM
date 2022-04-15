@@ -40,6 +40,7 @@ namespace Project_ATBM
                 tableUserList.Load(user);
 
                 dataGridView1.DataSource = tableUserList;
+                label1.Text = username;
             }
             catch (Exception ex)
             {
@@ -81,29 +82,25 @@ namespace Project_ATBM
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
-            DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
-            string cellValue = Convert.ToString(selectedRow.Cells["GRANTEE"].Value);
+            string user_name = label1.Text.Trim().ToUpper();
 
             OracleConnection con = new OracleConnection();
             con.ConnectionString = connectionString;
             con.Open();
 
-            GrantPrivelegetoUser form = new GrantPrivelegetoUser(cellValue);
+            GrantPrivelegetoUser form = new GrantPrivelegetoUser(user_name);
             form.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
-            DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
-            string cellValue = Convert.ToString(selectedRow.Cells["GRANTEE"].Value);
+            string user_name = label1.Text.Trim().ToUpper();
 
             OracleConnection con = new OracleConnection();
             con.ConnectionString = connectionString;
             con.Open();
 
-            GrantRoletoUser form = new GrantRoletoUser(cellValue);
+            GrantRoletoUser form = new GrantRoletoUser(user_name);
             form.Show();
         }
     }
