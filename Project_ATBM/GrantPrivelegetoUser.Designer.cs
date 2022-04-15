@@ -36,6 +36,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.username_txtbox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.selectColumn = new System.Windows.Forms.Button();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -62,6 +65,7 @@
             this.comboBox1.Size = new System.Drawing.Size(303, 28);
             this.comboBox1.TabIndex = 1;
             this.comboBox1.Text = "Chọn quyền";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -74,10 +78,11 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(209, 184);
+            this.textBox1.Location = new System.Drawing.Point(209, 181);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(303, 26);
             this.textBox1.TabIndex = 3;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // radioButton1
             // 
@@ -116,11 +121,44 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Username";
             // 
+            // selectColumn
+            // 
+            this.selectColumn.Location = new System.Drawing.Point(550, 177);
+            this.selectColumn.Name = "selectColumn";
+            this.selectColumn.Size = new System.Drawing.Size(106, 35);
+            this.selectColumn.TabIndex = 8;
+            this.selectColumn.Text = "Chọn cột";
+            this.selectColumn.UseVisualStyleBackColor = true;
+            this.selectColumn.Visible = false;
+            this.selectColumn.Click += new System.EventHandler(this.selectColumn_Click);
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(673, 177);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(175, 119);
+            this.checkedListBox1.TabIndex = 11;
+            this.checkedListBox1.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(582, 184);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(63, 20);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Column";
+            this.label4.Visible = false;
+            // 
             // GrantPrivelegetoUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(754, 418);
+            this.ClientSize = new System.Drawing.Size(1000, 471);
+            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.selectColumn);
             this.Controls.Add(this.username_txtbox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
@@ -147,5 +185,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox username_txtbox;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button selectColumn;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.Label label4;
     }
 }
