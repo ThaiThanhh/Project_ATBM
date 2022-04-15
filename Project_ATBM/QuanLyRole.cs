@@ -95,7 +95,7 @@ namespace Project_ATBM
             //get clicked cell value
             int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
             DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
-            string cellValue = Convert.ToString(selectedRow.Cells["USERNAME"].Value);
+            string cellValue = Convert.ToString(selectedRow.Cells["ROLE"].Value);
 
             OracleConnection con = new OracleConnection();
             con.ConnectionString = connectionString;

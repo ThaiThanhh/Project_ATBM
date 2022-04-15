@@ -79,6 +79,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRole.Designer.cs">
+      <DependentUpon>AddRole.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EditRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditRole.Designer.cs">
+      <DependentUpon>EditRole.cs</DependentUpon>
     </Compile>
     <Compile Include="EditUser.cs">
       <SubType>Form</SubType>
@@ -116,8 +128,20 @@
     <Compile Include="QLyUser.Designer.cs">
       <DependentUpon>QLyUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyRole.Designer.cs">
+      <DependentUpon>QuanLyRole.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddRole.resx">
+      <DependentUpon>AddRole.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditRole.resx">
+      <DependentUpon>EditRole.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditUser.resx">
       <DependentUpon>EditUser.cs</DependentUpon>
@@ -139,6 +163,9 @@
     </Compile>
     <EmbeddedResource Include="QLyUser.resx">
       <DependentUpon>QLyUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyRole.resx">
+      <DependentUpon>QuanLyRole.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>

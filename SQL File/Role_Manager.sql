@@ -61,3 +61,9 @@ begin
     execute immediate 'revoke ' || priv_name || ' on ' || obj || ' from ' || role_name;
 end;
 /
+
+select * from DBA_ROLES
+EXECUTE Create_Role('c##An_test1', 'identified by 1');
+EXECUTE Drop_Role('c##An_test1');
+
+select * from DBA_ROLES where role = 'QUANLY';

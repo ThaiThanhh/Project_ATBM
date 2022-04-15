@@ -45,7 +45,7 @@ namespace Project_ATBM
             con.Open();
 
             OracleCommand cmd = new OracleCommand();
-            cmd.CommandText = "select * from all_users where rolename = :role_name";
+            cmd.CommandText = "select * from DBA_ROLES where role = :role_name";
             cmd.Parameters.Add(":role_name", txtrolename.Text.ToUpper());
             cmd.Connection = con;
             cmd.CommandType = CommandType.Text;
@@ -56,7 +56,7 @@ namespace Project_ATBM
 
             if (users.Rows.Count > 0)
             {
-                MessageBox.Show("rolename " + txtrolename.Text.ToUpper() + " đã tồn tại");
+                MessageBox.Show("Role " + txtrolename.Text.ToUpper() + " đã tồn tại");
             }
             else
             {

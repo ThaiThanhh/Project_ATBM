@@ -25,7 +25,13 @@ namespace Project_ATBM
 
         private void button2_Click(object sender, EventArgs e)
         {
-     
+            QuanLyRole form = new QuanLyRole();
+            form.Show();
+        }
+
+        private void PanelPhanHe1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
