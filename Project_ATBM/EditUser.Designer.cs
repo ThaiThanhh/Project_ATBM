@@ -104,6 +104,7 @@
             this.Controls.Add(this.txtpassword);
             this.Name = "EditUser";
             this.Text = "EditUser";
+            this.Load += new System.EventHandler(this.EditUser_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

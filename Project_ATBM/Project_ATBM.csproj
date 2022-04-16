@@ -96,6 +96,18 @@
     <Compile Include="EditUser.Designer.cs">
       <DependentUpon>EditUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="GrantPrivelegetoUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GrantPrivelegetoUser.Designer.cs">
+      <DependentUpon>GrantPrivelegetoUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GrantRoletoUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GrantRoletoUser.Designer.cs">
+      <DependentUpon>GrantRoletoUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +119,12 @@
     </Compile>
     <Compile Include="PanelPhanHe1.Designer.cs">
       <DependentUpon>PanelPhanHe1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrivsManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrivsManage.Designer.cs">
+      <DependentUpon>PrivsManage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -122,11 +140,20 @@
     <EmbeddedResource Include="EditUser.resx">
       <DependentUpon>EditUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GrantPrivelegetoUser.resx">
+      <DependentUpon>GrantPrivelegetoUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrantRoletoUser.resx">
+      <DependentUpon>GrantRoletoUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PanelPhanHe1.resx">
       <DependentUpon>PanelPhanHe1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrivsManage.resx">
+      <DependentUpon>PrivsManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
