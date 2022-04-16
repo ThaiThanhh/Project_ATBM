@@ -34,9 +34,6 @@ namespace Project_ATBM
 
         }
 
-        private void PanelPhanHe1_Load(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }

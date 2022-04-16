@@ -19,7 +19,7 @@ namespace Project_ATBM
               (SERVER = DEDICATED)
               (SERVICE_NAME = XE)
             )
-            );DBA Privilege=SYSDBA; User Id = SYS;password=oracleqa1409";
+            );DBA Privilege=SYSDBA; User Id = SYS;password=1";
         public RevokePrivs()
         {
             InitializeComponent();

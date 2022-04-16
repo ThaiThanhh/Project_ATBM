@@ -116,6 +116,7 @@
     </Compile>
     <Compile Include="GrantPrivs.Designer.cs">
       <DependentUpon>GrantPrivs.cs</DependentUpon>
+	</Compile>
     <Compile Include="GrantPrivelegetoUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +181,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GrantPrivs.resx">
       <DependentUpon>GrantPrivs.cs</DependentUpon>
+	</EmbeddedResource>
     <EmbeddedResource Include="GrantPrivelegetoUser.resx">
       <DependentUpon>GrantPrivelegetoUser.cs</DependentUpon>
     </EmbeddedResource>
