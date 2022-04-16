@@ -164,5 +164,15 @@ namespace Project_ATBM
             EditUser form = new EditUser();
             form.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
+            string cellValue = Convert.ToString(selectedRow.Cells["USERNAME"].Value);
+            PrivsManage form = new PrivsManage(cellValue);
+            form.Show();
+           
+        }
     }
 }
