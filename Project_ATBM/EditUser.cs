@@ -20,7 +20,7 @@ namespace Project_ATBM
               (SERVER = DEDICATED)
               (SERVICE_NAME = XE)
             )
-            );DBA Privilege=SYSDBA; User Id = SYS;password=5906341";
+            );DBA Privilege=SYSDBA; User Id = SYS;password=1";
         public EditUser()
         {
             InitializeComponent();
@@ -81,6 +81,11 @@ namespace Project_ATBM
                 }
             }
             con.Close();
+        }
+
+        private void EditUser_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
