@@ -160,5 +160,10 @@ namespace Project_ATBM
 
             con.Close();
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
