@@ -11,7 +11,7 @@ using Oracle.ManagedDataAccess.Client;
 
 namespace Project_ATBM
 {
-    public partial class GrantPrivs : Form
+    public partial class RevokePrivs : Form
     {
         string connectionString = @"Data Source=(DESCRIPTION =
             (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))
@@ -20,7 +20,7 @@ namespace Project_ATBM
               (SERVICE_NAME = XE)
             )
             );DBA Privilege=SYSDBA; User Id = SYS;password=oracleqa1409";
-        public GrantPrivs()
+        public RevokePrivs()
         {
             InitializeComponent();
         }
@@ -35,7 +35,8 @@ namespace Project_ATBM
 
         }
 
-        private void GrantPrivs_Load(object sender, EventArgs e)
+
+        private void RevokePrivs_Load(object sender, EventArgs e)
         {
 
         }
@@ -72,13 +73,13 @@ namespace Project_ATBM
             }
             else
             {
-                //grant privs
+                //revoke privs
                 try
                 {
-                    OracleCommand cmd_grant_privs = new OracleCommand();
-                    cmd_grant_privs.Connection = con;
-                    cmd_grant_privs.CommandText = "Grant_Privs_To_Role";
-                    cmd_grant_privs.CommandType = CommandType.StoredProcedure;
+                    OracleCommand cmd_revole_privs = new OracleCommand();
+                    cmd_revole_privs.Connection = con;
+                    cmd_revole_privs.CommandText = "Revoke_Role_Privs";
+                    cmd_revole_privs.CommandType = CommandType.StoredProcedure;
                     if (txt_rolename.Text == null)
                     {
                         MessageBox.Show("Role không tồn tại");
@@ -86,11 +87,11 @@ namespace Project_ATBM
                     else
                     {
 
-                        cmd_grant_privs.Parameters.Add(new OracleParameter("role_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = txt_rolename.Text.ToUpper();
-                        cmd_grant_privs.Parameters.Add(new OracleParameter("privs_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = txt_privsname.Text;
-                        cmd_grant_privs.Parameters.Add(new OracleParameter("obj", OracleDbType.Varchar2, ParameterDirection.Input)).Value = txt_obj.Text;
-                        cmd_grant_privs.ExecuteNonQuery();
-                        MessageBox.Show("Đã cấp quyền " + txt_privsname.Text.ToUpper() + " cho role " + txt_rolename.Text.ToUpper() + " trên đối tượng " + txt_obj.Text.ToUpper());
+                        cmd_revole_privs.Parameters.Add(new OracleParameter("role_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = txt_rolename.Text.ToUpper();
+                        cmd_revole_privs.Parameters.Add(new OracleParameter("privs_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = txt_privsname.Text;
+                        cmd_revole_privs.Parameters.Add(new OracleParameter("obj", OracleDbType.Varchar2, ParameterDirection.Input)).Value = txt_obj.Text;
+                        cmd_revole_privs.ExecuteNonQuery();
+                        MessageBox.Show("Đã thu hồi quyền " + txt_privsname.Text.ToUpper() + " cho role " + txt_rolename.Text.ToUpper() + " trên đối tượng " + txt_obj.Text.ToUpper());
                     }
                 }
                 catch (Exception ex)

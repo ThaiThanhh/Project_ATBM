@@ -1,6 +1,6 @@
 ﻿namespace Project_ATBM
 {
-    partial class GrantPrivs
+    partial class RevokePrivs
     {
         /// <summary>
         /// Required designer variable.
@@ -108,11 +108,11 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(110, 50);
             this.button2.TabIndex = 7;
-            this.button2.Text = "Cấp quyền";
+            this.button2.Text = "Thu hồi quyền";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
-            // GrantPrivs
+            // RevokePrivs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -125,9 +125,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
-            this.Name = "GrantPrivs";
-            this.Text = "GrantPrivs";
-            this.Load += new System.EventHandler(this.GrantPrivs_Load);
+            this.Name = "RevokePrivs";
+            this.Text = "RevokePrivs";
+            this.Load += new System.EventHandler(this.RevokePrivs_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

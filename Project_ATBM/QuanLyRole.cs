@@ -103,7 +103,7 @@ namespace Project_ATBM
 
             try
             {
-                //Drop user
+                //Drop role
                 OracleCommand cmd_drop_user = new OracleCommand();
                 cmd_drop_user.Connection = con;
                 cmd_drop_user.CommandText = "Drop_Role";
@@ -128,22 +128,48 @@ namespace Project_ATBM
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            GrantPrivs form = new GrantPrivs();
-            form.Show();
-        }
-
         private void button5_Click(object sender, EventArgs e)
         {
             EditRole form = new EditRole();
             form.Show();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void button6_Click_1(object sender, EventArgs e)
         {
-            EditRole form = new EditRole();
+            RevokePrivs form = new RevokePrivs();
             form.Show();
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            GrantPrivs form = new GrantPrivs();
+            form.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            OracleConnection con = new OracleConnection();
+            con.ConnectionString = connectionString;
+            con.Open();
+
+            //Lấy dữ liệu cho table danh sách các roles trong hệ thống
+            OracleCommand getRoles = new OracleCommand();
+
+            getRoles.CommandText = "select ROLE_TAB_PRIVS.role as \"Nhóm người dùng\", table_name as \"Tên bảng\", column_name as \"Tên cột\", privilege \"Quyền\" from ROLE_TAB_PRIVS join DBA_ROLES on ROLE_TAB_PRIVS.role = DBA_ROLES.role where DBA_ROLES.oracle_maintained = 'N'";
+
+            getRoles.Connection = con;
+
+            getRoles.CommandType = CommandType.Text;
+
+            OracleDataReader roleList = getRoles.ExecuteReader();
+
+            DataTable tableRoleList = new DataTable();
+
+            tableRoleList.Load(roleList);
+
+            dataGridView1.DataSource = tableRoleList;
+
+            con.Close();
         }
     }
 }
