@@ -76,4 +76,4 @@ begin
 end;
 /
 
---Cái này tương tự vụ grant role thôi, ví dụ thì cũng tương tự cái kia
+

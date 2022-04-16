@@ -8,10 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
+
 namespace Project_ATBM
 {
-    public partial class AddUser : Form
+    public partial class AddRole : Form
     {
+
         string connectionString = @"Data Source=(DESCRIPTION =
             (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))
             (CONNECT_DATA =
@@ -19,12 +21,13 @@ namespace Project_ATBM
               (SERVICE_NAME = XE)
             )
             );DBA Privilege=SYSDBA; User Id = SYS;password=oracleqa1409";
-        public AddUser()
+
+        public AddRole()
         {
             InitializeComponent();
         }
 
-        private void AddUser_Load(object sender, EventArgs e)
+        private void AddRole_Load(object sender, EventArgs e)
         {
 
         }
@@ -34,7 +37,7 @@ namespace Project_ATBM
 
         }
 
-        private void addUserBtn_Click(object sender, EventArgs e)
+        private void addRoleBtn_Click(object sender, EventArgs e)
         {
 
             OracleConnection con = new OracleConnection();
@@ -42,8 +45,8 @@ namespace Project_ATBM
             con.Open();
 
             OracleCommand cmd = new OracleCommand();
-            cmd.CommandText = "select * from all_users where username = :user_name";
-            cmd.Parameters.Add(":user_name", txtusername.Text.ToUpper());
+            cmd.CommandText = "select * from DBA_ROLES where role = :role_name";
+            cmd.Parameters.Add(":role_name", txtrolename.Text.ToUpper());
             cmd.Connection = con;
             cmd.CommandType = CommandType.Text;
             OracleDataReader dr = cmd.ExecuteReader();
@@ -53,32 +56,33 @@ namespace Project_ATBM
 
             if (users.Rows.Count > 0)
             {
-                MessageBox.Show("Username " +  txtusername.Text.ToUpper()+ " đã tồn tại");
+                MessageBox.Show("Role " + txtrolename.Text.ToUpper() + " đã tồn tại");
             }
             else
             {
                 //add user
                 try
                 {
-                    OracleCommand cmd_add_user = new OracleCommand();
-                    cmd_add_user.Connection = con;
-                    cmd_add_user.CommandText = "proc_add_user";
-                    cmd_add_user.CommandType = CommandType.StoredProcedure;
-                    if (txtpassword.Text == null)
+                    OracleCommand cmd_add_role = new OracleCommand();
+                    cmd_add_role.Connection = con;
+                    cmd_add_role.CommandText = "Create_Role";
+                    cmd_add_role.CommandType = CommandType.StoredProcedure;
+                    if (txtrolename.Text == null)
                     {
-                        cmd_add_user.Parameters.Add(":username", txtusername.Text.ToUpper());
+                        cmd_add_role.Parameters.Add(":rolename", txtrolename.Text.ToUpper());
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("Đã thêm user mới");
+                        MessageBox.Show("Đã thêm role mới");
                     }
-                    else {
-                
-                        cmd_add_user.Parameters.Add(new OracleParameter("user_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = txtusername.Text.ToUpper();
-                        cmd_add_user.Parameters.Add(new OracleParameter("u_password", OracleDbType.Varchar2, ParameterDirection.Input)).Value = txtpassword.Text;
-                        cmd_add_user.ExecuteNonQuery();
-                        MessageBox.Show("Đã thêm user mới");
+                    else
+                    {
+
+                        cmd_add_role.Parameters.Add(new OracleParameter("role_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = txtrolename.Text.ToUpper();
+                        cmd_add_role.Parameters.Add(new OracleParameter("identity_mode", OracleDbType.Varchar2, ParameterDirection.Input)).Value = txtidentitymode.Text;
+                        cmd_add_role.ExecuteNonQuery();
+                        MessageBox.Show("Đã thêm role mới");
                     }
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.ToString());
                 }
@@ -96,12 +100,12 @@ namespace Project_ATBM
 
         }
 
-        private void txtpassword_TextChanged(object sender, EventArgs e)
+        private void txtrolename_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void txtusername_TextChanged(object sender, EventArgs e)
+        private void txtidentitymode_TextChanged(object sender, EventArgs e)
         {
 
         }
