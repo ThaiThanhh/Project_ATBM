@@ -92,3 +92,12 @@ BEGIN
     
     EXECUTE IMMEDIATE ( tmp_query );
 END;
+-- Revoke role
+create or replace PROCEDURE proc_revoke_role
+ (user_name IN VARCHAR2, role_name IN VARCHAR2)
+IS
+    tmp_query VARCHAR(150);
+BEGIN
+    tmp_query := 'revoke ' || role_name || ' from ' || user_name;
+    EXECUTE IMMEDIATE ( tmp_query );
+END;
