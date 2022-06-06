@@ -54,57 +54,38 @@ namespace Project_ATBM
             
             int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
             DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
-            string role_name = Convert.ToString(selectedRow.Cells["GRANTED_ROLE"].Value);
+   
             string user_name = Convert.ToString(selectedRow.Cells["GRANTEE"].Value);
-           
+            string table = Convert.ToString(selectedRow.Cells["TABLE_NAME"].Value);
+            string priv = Convert.ToString(selectedRow.Cells["PRIVILEGE"].Value);
 
             OracleConnection con = new OracleConnection();
             con.ConnectionString = connectionString;
             con.Open();
-            if (role_name != null)
+            try
             {
-                try
-                {
-                    OracleCommand cmd_drop_user = new OracleCommand();
-                    cmd_drop_user.Connection = con;
-                    cmd_drop_user.CommandText = "proc_revoke_role";
-                    cmd_drop_user.CommandType = CommandType.StoredProcedure;
-                    cmd_drop_user.Parameters.Add(new OracleParameter("user_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = user_name;
-                    cmd_drop_user.Parameters.Add(new OracleParameter("role_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = role_name;
+              
+                OracleCommand cmd_drop_user = new OracleCommand();
+                cmd_drop_user.Connection = con;
+                cmd_drop_user.CommandText = "proc_revoke_privilege";
+                cmd_drop_user.CommandType = CommandType.StoredProcedure;
+                cmd_drop_user.Parameters.Add(new OracleParameter("user_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = user_name;
+                cmd_drop_user.Parameters.Add(new OracleParameter("p_table", OracleDbType.Varchar2, ParameterDirection.Input)).Value = table;
+                cmd_drop_user.Parameters.Add(new OracleParameter("privilege", OracleDbType.Varchar2, ParameterDirection.Input)).Value = priv;
 
-                    cmd_drop_user.ExecuteNonQuery();
-                    MessageBox.Show("Đã thu hồi role!");
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else
-            {
-                try
-                {
-                    string table = Convert.ToString(selectedRow.Cells["TABLE_NAME"].Value);
-                    string priv = Convert.ToString(selectedRow.Cells["PRIVILEGE"].Value);
-                    OracleCommand cmd_drop_user = new OracleCommand();
-                    cmd_drop_user.Connection = con;
-                    cmd_drop_user.CommandText = "proc_revoke_privilege";
-                    cmd_drop_user.CommandType = CommandType.StoredProcedure;
-                    cmd_drop_user.Parameters.Add(new OracleParameter("user_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = user_name;
-                    cmd_drop_user.Parameters.Add(new OracleParameter("p_table", OracleDbType.Varchar2, ParameterDirection.Input)).Value = table;
-                    cmd_drop_user.Parameters.Add(new OracleParameter("privilege", OracleDbType.Varchar2, ParameterDirection.Input)).Value = priv;
-                
-                    cmd_drop_user.ExecuteNonQuery();
-                    MessageBox.Show("Đã thu hồi quyền!");
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                cmd_drop_user.ExecuteNonQuery();
+                MessageBox.Show("Đã thu hồi quyền!");
 
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -184,6 +165,36 @@ namespace Project_ATBM
             label1.Text = username;
 
             con.Close();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
+            string role_name = Convert.ToString(selectedRow.Cells["GRANTED_ROLE"].Value);
+            string user_name = Convert.ToString(selectedRow.Cells["GRANTEE"].Value);
+            OracleConnection con = new OracleConnection();
+            con.ConnectionString = connectionString;
+            con.Open();
+            try
+            {
+                
+                OracleCommand cmd_drop_user = new OracleCommand();
+                cmd_drop_user.Connection = con;
+                cmd_drop_user.CommandText = "proc_revoke_role";
+                cmd_drop_user.CommandType = CommandType.StoredProcedure;
+                cmd_drop_user.Parameters.Add(new OracleParameter("user_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = user_name;
+                cmd_drop_user.Parameters.Add(new OracleParameter("role_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = role_name;
+                
+
+                cmd_drop_user.ExecuteNonQuery();
+                MessageBox.Show("Đã thu hồi quyền!");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

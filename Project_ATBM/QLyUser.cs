@@ -31,7 +31,8 @@ namespace Project_ATBM
             //Lấy dữ liệu cho table danh sách các user trong hệ thống
             OracleCommand getUsers = new OracleCommand();
 
-            getUsers.CommandText = "SELECT username, user_id, account_status, lock_date, expiry_date, created, authentication_type, default_tablespace FROM dba_users";
+            getUsers.CommandText = "SELECT username, user_id, account_status, lock_date," +
+                " expiry_date, created, authentication_type, default_tablespace FROM dba_users";
 
             getUsers.Connection = con;
 
