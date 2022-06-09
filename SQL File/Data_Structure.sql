@@ -1,3 +1,17 @@
+alter session set "_ORACLE_SCRIPT" = true;
+
+--drop user soyte cascade;
+create user soytex identified by admin1;
+grant DBA, connect to soytex;
+
+connect soytex/admin1 as sysdba;
+
+-- drop table CSYT cascade constraints;
+-- drop table NhanVien cascade constraints;
+-- drop table BenhNhan cascade constraints;
+-- drop table HSBA cascade constraints;
+-- drop table HSBA_DV cascade constraints;
+
 create table CSYT
 (
     MaCSYT varchar2(15) primary key,
@@ -65,3 +79,5 @@ create table HSBA_DV
     constraint HSBA_DV_PK primary key (MaHSBA, MaDV, Ngay),
     constraint HSBA_DV_FK foreign key (MaHSBA) references HSBA(MaHSBA)
 );
+
+alter session set "_ORACLE_SCRIPT" = false;
