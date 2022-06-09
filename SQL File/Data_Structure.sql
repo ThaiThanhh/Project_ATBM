@@ -6,11 +6,11 @@ grant DBA, connect to soytex;
 
 connect soytex/admin1 as sysdba;
 
--- drop table CSYT cascade constraints;
--- drop table NhanVien cascade constraints;
--- drop table BenhNhan cascade constraints;
--- drop table HSBA cascade constraints;
--- drop table HSBA_DV cascade constraints;
+-- drop table soytex.CSYT cascade constraints;
+-- drop table soytex.NhanVien cascade constraints;
+-- drop table soytex.BenhNhan cascade constraints;
+-- drop table soytex.HSBA cascade constraints;
+-- drop table soytex.HSBA_DV cascade constraints;
 
 create table soytex.CSYT
 (
