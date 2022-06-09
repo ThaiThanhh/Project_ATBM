@@ -3,7 +3,7 @@ create table CSYT
     MaCSYT varchar2(15) primary key,
     TenCSYT nvarchar2(80),
     DCCSYT nvarchar2(200),
-    SDTCSYT nvarchar2(11),
+    SDTCSYT nvarchar2(11)
 );
 
 create table NhanVien
@@ -17,7 +17,7 @@ create table NhanVien
     SoDT varchar2(11),
     CSYT varchar2(15),
     VaiTro nvarchar2(12) check (VaiTro in ('Thanh tra', N'Cơ sở y tế', N'Y sĩ/ Bác sĩ', N'Nghiên cứu')),
-    ChuyenKhoa nvarchar2(50),
+    ChuyenKhoa nvarchar2(50)
 );
 
 create table BenhNhan
