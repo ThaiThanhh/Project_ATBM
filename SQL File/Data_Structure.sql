@@ -49,7 +49,7 @@ create table soytex.BenhNhan
     TienSuBenhGD nvarchar2(100),
     DiUngThuoc nvarchar2(150),
 
-    constraint BN_FK foreign key (MaCSYT) references CSYT(MaCSYT)
+    constraint BN_FK foreign key (MaCSYT) references soytex.CSYT(MaCSYT)
 );
 
 create table soytex.HSBA
@@ -63,9 +63,9 @@ create table soytex.HSBA
     MaCSYT varchar2(15),
     KetLuan nvarchar2(100),
 
-    constraint HSBA_FK1 foreign key (MaBN) references BenhNhan(MaBN),
-    constraint HSBA_FK2 foreign key (MaCSYT) references CSYT(MaCSYT),
-    constraint HSBA_FK3 foreign key (MaBS) references NhanVien(MaNV)
+    constraint HSBA_FK1 foreign key (MaBN) references soytex.BenhNhan(MaBN),
+    constraint HSBA_FK2 foreign key (MaCSYT) references soytex.CSYT(MaCSYT),
+    constraint HSBA_FK3 foreign key (MaBS) references soytex.NhanVien(MaNV)
 );
 
 create table soytex.HSBA_DV
@@ -77,7 +77,7 @@ create table soytex.HSBA_DV
     KetQua nvarchar2(100),
 
     constraint HSBA_DV_PK primary key (MaHSBA, MaDV, Ngay),
-    constraint HSBA_DV_FK foreign key (MaHSBA) references HSBA(MaHSBA)
+    constraint HSBA_DV_FK foreign key (MaHSBA) references soytex.HSBA(MaHSBA)
 );
 
 alter session set "_ORACLE_SCRIPT" = false;
