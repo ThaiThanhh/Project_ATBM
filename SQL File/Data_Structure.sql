@@ -12,7 +12,7 @@ connect soytex/admin1 as sysdba;
 -- drop table HSBA cascade constraints;
 -- drop table HSBA_DV cascade constraints;
 
-create table CSYT
+create table soytex.CSYT
 (
     MaCSYT varchar2(15) primary key,
     TenCSYT nvarchar2(80),
@@ -20,7 +20,7 @@ create table CSYT
     SDTCSYT nvarchar2(11)
 );
 
-create table NhanVien
+create table soytex.NhanVien
 (
     MaNV varchar2(15) primary key,
     HoTen nvarchar2(40),
@@ -34,7 +34,7 @@ create table NhanVien
     ChuyenKhoa nvarchar2(50)
 );
 
-create table BenhNhan
+create table soytex.BenhNhan
 (
     MaBN varchar2(15) primary key,
     MaCSYT varchar2(15),
@@ -52,7 +52,7 @@ create table BenhNhan
     constraint BN_FK foreign key (MaCSYT) references CSYT(MaCSYT)
 );
 
-create table HSBA
+create table soytex.HSBA
 (
     MaHSBA varchar2(15) primary key,
     MaBN varchar2(15),
@@ -68,7 +68,7 @@ create table HSBA
     constraint HSBA_FK3 foreign key (MaBS) references NhanVien(MaNV)
 );
 
-create table HSBA_DV
+create table soytex.HSBA_DV
 (
     MaHSBA varchar2(15),
     MaDV varchar2(10),
