@@ -1,6 +1,6 @@
 alter session set "_ORACLE_SCRIPT" = true;
 
---drop user soyte cascade;
+--drop user soytex cascade;
 create user soytex identified by admin1;
 grant DBA, connect to soytex;
 
