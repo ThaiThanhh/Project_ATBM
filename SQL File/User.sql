@@ -20,6 +20,7 @@ begin
 
     close NV_list;
 end;
+/
 
 --Tạo các user bệnh nhân từ bảng BenhNhan, lấy MaBN làm username, MK mặc định là 1
 declare
@@ -38,5 +39,6 @@ begin
 
     close BN_list;
 end;
+/
 
 alter session set '_ORACLE_SCRIPT' = false;
