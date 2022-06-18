@@ -110,13 +110,12 @@
     <Compile Include="EditUser.Designer.cs">
       <DependentUpon>EditUser.cs</DependentUpon>
     </Compile>
-
     <Compile Include="GrantPrivs.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GrantPrivs.Designer.cs">
       <DependentUpon>GrantPrivs.cs</DependentUpon>
-	</Compile>
+    </Compile>
     <Compile Include="GrantPrivelegetoUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +133,12 @@
     </Compile>
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="PanelPhanHe1.cs">
       <SubType>Form</SubType>
@@ -167,6 +172,12 @@
     <Compile Include="RevokePrivs.Designer.cs">
       <DependentUpon>RevokePrivs.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThanhTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThanhTra.Designer.cs">
+      <DependentUpon>ThanhTra.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddRole.resx">
       <DependentUpon>AddRole.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,7 +192,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GrantPrivs.resx">
       <DependentUpon>GrantPrivs.cs</DependentUpon>
-	</EmbeddedResource>
+    </EmbeddedResource>
     <EmbeddedResource Include="GrantPrivelegetoUser.resx">
       <DependentUpon>GrantPrivelegetoUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PanelPhanHe1.resx">
       <DependentUpon>PanelPhanHe1.cs</DependentUpon>
@@ -214,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RevokePrivs.resx">
       <DependentUpon>RevokePrivs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThanhTra.resx">
+      <DependentUpon>ThanhTra.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>

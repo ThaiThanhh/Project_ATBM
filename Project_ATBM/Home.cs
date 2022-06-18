@@ -33,5 +33,12 @@ namespace Project_ATBM
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login form = new Login();
+            form.Show();
+        }
     }
 }
