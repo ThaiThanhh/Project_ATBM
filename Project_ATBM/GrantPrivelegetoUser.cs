@@ -165,5 +165,10 @@ namespace Project_ATBM
         {
 
         }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
