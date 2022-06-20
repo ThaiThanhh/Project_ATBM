@@ -64,7 +64,7 @@ namespace Project_ATBM
 
                 if (role == "Thanh tra")
                 {
-                    ThanhTra form = new ThanhTra(username, name);
+                    ThanhTra form = new ThanhTra(username, name, password);
                     this.Hide();
                     form.Show();
                     con.Close();
