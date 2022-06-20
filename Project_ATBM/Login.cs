@@ -71,7 +71,10 @@ namespace Project_ATBM
                 }
                 else if (role == "Y sĩ/ Bác sĩ")
                 {
-
+                    BacSi form = new BacSi(username, name, password);
+                    this.Hide();
+                    form.Show();
+                    con.Close();
                 }
                 else if (role == "Nghiên cứu")
                 {
