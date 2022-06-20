@@ -93,6 +93,12 @@
     <Compile Include="AddUser.Designer.cs">
       <DependentUpon>AddUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="BacSi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BacSi.Designer.cs">
+      <DependentUpon>BacSi.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -184,6 +190,9 @@
     <EmbeddedResource Include="AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BacSi.resx">
+      <DependentUpon>BacSi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditRole.resx">
       <DependentUpon>EditRole.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,6 +228,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="QLyUser.resx">
       <DependentUpon>QLyUser.cs</DependentUpon>
@@ -262,6 +272,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1024px-Search_Icon.svg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Text.Json.6.0.3\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.3\build\System.Text.Json.targets')" />
