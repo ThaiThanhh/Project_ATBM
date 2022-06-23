@@ -69,13 +69,20 @@ namespace Project_ATBM
                     form.Show();
                     con.Close();
                 }
-                else if (role == "Y sĩ/ Bác sĩ")
+                else if (role == "Y si/ Bac si")
                 {
 
                 }
-                else if (role == "Nghiên cứu")
+                else if (role == "Nghien cuu")
                 {
 
+                }
+                else if (role == "Co so y te")
+                {
+                    MedicalRecord form = new MedicalRecord(username, password);
+                    this.Hide();
+                    form.Show();
+                    con.Close();
                 }
             }
             catch (OracleException ex)
