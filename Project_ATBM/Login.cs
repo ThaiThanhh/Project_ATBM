@@ -69,14 +69,14 @@ namespace Project_ATBM
                     form.Show();
                     con.Close();
                 }
-                else if (role == "Y sĩ/ Bác sĩ")
+                else if (role == "Y si/ Bac si")
                 {
                     BacSi form = new BacSi(username, name, password);
                     this.Hide();
                     form.Show();
                     con.Close();
                 }
-                else if (role == "Nghiên cứu")
+                else if (role == "Nghien cuu")
                 {
 
                 }

@@ -69,6 +69,16 @@ namespace Project_ATBM
 
         private void textBox1_Enter(object sender, EventArgs e)
         {
+            
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
             string connectionString = @"Data Source=(DESCRIPTION =
             (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))
             (CONNECT_DATA =
@@ -83,22 +93,23 @@ namespace Project_ATBM
             command.Connection = con;
             con.Open();
 
-            string searchText = searchBox.Text;
-
             ComboBox cb = sender as ComboBox;
+            cb = comboBox1;
             string str = cb.SelectedItem.ToString();
+
+            string searchText = searchBox.Text;
             if (str == "Bệnh nhân")
             {
-                command.CommandText = $"SELECT * FROM SOYTEX.BENHNHAN WHERE MABN LIKE %{searchText}% or CMND LIKE %{searchText}";
+                command.CommandText = $"SELECT * FROM SOYTEX.BENHNHAN WHERE MABN LIKE '%{searchText}%' or CMND LIKE '%{searchText}'";
             }
             else if (str == "Hồ sơ bệnh án")
             {
-                command.CommandText = $"SELECT * FROM SOYTEX.HSBA MABN LIKE %{searchText}% or CMND LIKE %{searchText}";
+                command.CommandText = $"SELECT SOYTEX.HSBA.* FROM SOYTEX.HSBA JOIN SOYTEX.BENHNHAN ON SOYTEX.HSBA.MABN = SOYTEX.BENHNHAN.MABN WHERE SOYTEX.BENHNHAN.MABN LIKE '%{searchText}%' or CMND LIKE '%{searchText}'";
 
             }
             else
             {
-                command.CommandText = $"SELECT * FROM SOYTEX.HSBA_DV MABN LIKE %{searchText}% or CMND LIKE %{searchText}";
+                command.CommandText = $"SELECT SOYTEX.HSBA_DV.* FROM SOYTEX.HSBA_DV JOIN SOYTEX.BENHNHAN ON SOYTEX.HSBA_DV.MABN = SOYTEX.BENHNHAN.MABN WHERE SOYTEX.BENHNHAN.MABN LIKE '%{searchText}%' or CMND LIKE '%{searchText}'";
             }
             command.CommandType = CommandType.Text;
             OracleDataReader data = command.ExecuteReader();
