@@ -44,12 +44,20 @@ namespace Project_ATBM
             OracleCommand command = new OracleCommand();
             command.Connection = con;
 
-            command.CommandText = "SELECT HoTen, VaiTro FROM SOYTEX.NHANVIEN WHERE MANV = :username";
-            command.Parameters.Add("username", username);
-            command.CommandType = CommandType.Text;
-
             string role = "";
             string name = "";
+
+            if (username[0] == 'B' && username[1] == 'N')
+            {
+                command.CommandText = "SELECT TenBN FROM SOYTEX.BENHNHAN WHERE MaBN = :username";
+            }
+            else
+            {
+                command.CommandText = "SELECT HoTen, VaiTro FROM SOYTEX.NHANVIEN WHERE MANV = :username";
+            }
+
+            command.Parameters.Add("username", username);
+            command.CommandType = CommandType.Text;
             try
             {
                 con.Open();
@@ -58,7 +66,11 @@ namespace Project_ATBM
                 {
                     if (!roleList.HasRows)
                         break;
-                    role = roleList.GetValue(1).ToString();
+
+                    if (username[0] == 'B' && username[1] == 'N')
+                        role = "Benh nhan";
+                    else
+                        role = roleList.GetValue(1).ToString();
                     name = roleList.GetValue(0).ToString(); 
                 }
 
@@ -72,6 +84,13 @@ namespace Project_ATBM
                 else if (role == "Y si/ Bac si")
                 {
                     BacSi form = new BacSi(username, name, password);
+                    this.Hide();
+                    form.Show();
+                    con.Close();
+                }
+                else if (role == "Benh nhan")
+                {
+                    Patient form = new Patient(username, name, password);
                     this.Hide();
                     form.Show();
                     con.Close();
