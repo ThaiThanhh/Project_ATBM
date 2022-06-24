@@ -99,7 +99,7 @@ namespace Project_ATBM
 
             OracleCommand command = new OracleCommand();
             command.Connection = con;
-            command.CommandText = $"UPDATE SOYTEX.BenhNhan SET TenBN = '%{v_name}%', CMND = '%{v_id}%', NgaySinh = '%{v_dob}%', SoNha = '%{v_num}%', TenDuong = '%{v_street}%', QuanHuyen = '%{v_district}%', TinhTP = '%{v_city}%', TienSuBenh = '%{v_medicalHistory}%', TienSuBenhGD = '%{v_familyMedicalHistory}%', DiUngThuoc = '%{v_allergyt}%'";
+            command.CommandText = $"UPDATE SOYTEX.BenhNhan SET TenBN = '{v_name}', CMND = '{v_id}', NgaySinh = TO_DATE('{v_dob}', 'DD-MM-YYYY'), SoNha = '{v_num}', TenDuong = '{v_street}', QuanHuyen = '{v_district}', TinhTP = '{v_city}', TienSuBenh = '{v_medicalHistory}', TienSuBenhGD = '{v_familyMedicalHistory}', DiUngThuoc = '{v_allergyt}'";
             command.CommandType = CommandType.Text;
             int rows_affected = command.ExecuteNonQuery();
 
