@@ -36,41 +36,55 @@ namespace Project_ATBM
             con.ConnectionString = connectionString;
             con.Open();
 
-            if (comboBoxPatient == null)
+            if (textBoxPatient.Text == "")
             {
-                MessageBox.Show("Vui lòng chọn bệnh nhân!");
+                MessageBox.Show("Vui lòng nhập mã bệnh nhân!");
             }
-            else if (textBoxDiagnose == null)
+            else if (textBoxDiagnose.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập chẩn đoán!");
             }
-            else if (comboBoxDoctor == null)
+            else if (textBoxDoctor.Text == "")
             {
-                MessageBox.Show("Vui lòng chọn Bác sĩ!");
+                MessageBox.Show("Vui lòng nhập mã Bác sĩ!");
             }
-            else if (comboBoxMajor == null)
+            else if (textBoxMajor.Text == "")
             {
-                MessageBox.Show("Vui lòng chọn Khoa!");
+                MessageBox.Show("Vui lòng nhập mã Khoa!");
             }
-
-            string hsba = comboBoxPatient.SelectedItem.ToString();
-            string patient = comboBoxPatient.SelectedItem.ToString();
-            string doctor = comboBoxDoctor.SelectedItem.ToString();
-            string major = comboBoxMajor.SelectedItem.ToString();
-            string csyt = null;
-
-            OracleCommand cmd = new OracleCommand();
-            cmd.CommandText = "INSERT INTO SOYTEX.HSBA VALUES(':id_hsba', ':id_patient', TO_DATE(NOW(),'dd/mm/yyyy'), ':diagnose', ':id_doctor', ':id_major', ':id_csyt', ':result');";
-            cmd.Parameters.Add(":id_hsba", hsba);
-            cmd.Parameters.Add(":id_patient", patient);
-            cmd.Parameters.Add(":diagnose", textBoxDiagnose.Text);
-            cmd.Parameters.Add(":id_doctor", doctor);
-            cmd.Parameters.Add(":id_major", major);
-            cmd.Parameters.Add(":id_csyt", csyt);
-            cmd.Parameters.Add(":result", textBoxDiagnose.Text);
-            cmd.Connection = con;
-            cmd.CommandType = CommandType.Text;
-            cmd.ExecuteNonQuery();
+            else if (textBoxMaHSBA.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập mã hồ sơ bệnh án!");
+            }
+            else if (textBoxCSYT.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập mã cơ sở y tế!");
+            }
+            else if (textBoxDate.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập ngày!");
+            }
+            try
+            {
+                OracleCommand cmd = new OracleCommand();
+                cmd.Connection = con;
+                cmd.CommandText = "SOYTEX.proc_insert_HSBA";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new OracleParameter("p_mahsba", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxMaHSBA.Text; ;
+                cmd.Parameters.Add(new OracleParameter("p_patient", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxPatient.Text;
+                cmd.Parameters.Add(new OracleParameter("p_date", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxDate.Text;
+                cmd.Parameters.Add(new OracleParameter("p_diagnose", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxDiagnose.Text;
+                cmd.Parameters.Add(new OracleParameter("p_doctor", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxDoctor.Text;
+                cmd.Parameters.Add(new OracleParameter("p_major", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxMajor.Text;
+                cmd.Parameters.Add(new OracleParameter("p_csyt", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxCSYT.Text;
+                cmd.Parameters.Add(new OracleParameter("p_result", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxResult.Text;
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Đã thêm hồ sơ bệnh án mới");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
 
             con.Close();
         }
@@ -99,7 +113,7 @@ namespace Project_ATBM
             con.Open();
 
             OracleCommand cmd = new OracleCommand();
-            cmd.CommandText = "SELECT * FROM SOYTEX.HSBA WHERE MAHSBA = :id_hsba";
+            cmd.CommandText = "SELECT * FROM SOYTEX.HSBA_DV WHERE MAHSBA = :id_hsba";
             cmd.Parameters.Add(":id_hsba", cellValue.ToUpper());
             cmd.Connection = con;
             cmd.CommandType = CommandType.Text;
@@ -139,6 +153,16 @@ namespace Project_ATBM
         }
 
         private void MedicalRecord_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
