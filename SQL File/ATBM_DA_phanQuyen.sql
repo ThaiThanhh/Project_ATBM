@@ -286,7 +286,7 @@ Begin
         elsif (user_role = 'THANHTRA') then
             return '1=1';
         
-        elsif (user_role = 'BACSI') then
+        elsif (user_role = 'YSI_BACSI') then
             return 'MABN in (select MABN from SOYTEX.HSBA WHERE MABS = ''' || usr ||''')';
             
         end if;
