@@ -282,13 +282,18 @@ Begin
             
         if (user_role = 'BENHNHAN') then
             return 'MABN = '''|| usr ||'''';
+            
+        elsif (user_role = 'THANHTRA') then
+            return '1=1';
+        
+        elsif (user_role = 'THANHTRA') then
+            return 'MABN in (select MABN from SOYTEX.HSBA WHERE MABS = ''' || usr ||''')';
+            
         end if;
         
     END LOOP;
     
     CLOSE CUR;
-    
-    return 'MABN in (select MABN from SOYTEX.HSBA WHERE MABS = ''' || usr ||''')';
 End;
 
 
