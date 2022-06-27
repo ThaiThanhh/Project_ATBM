@@ -21,83 +21,7 @@ namespace Project_ATBM
             Header.Text = Header.Text + " " + name;
             user_name = username;
             pass = password;
-        }
 
-        private void Patient_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void labelAllergy_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonUpdate_Click(object sender, EventArgs e)
-        {
-            string connectionString = @"Data Source=(DESCRIPTION =
-            (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))
-            (CONNECT_DATA =
-              (SERVER = DEDICATED)
-              (SERVICE_NAME = XE)
-            )
-            ); User Id = " + user_name + ";password=" + pass;
-
-            OracleConnection con = new OracleConnection();
-            con.ConnectionString = connectionString;
-            con.Open();
-
-            try
-            {
-                OracleCommand cmd = new OracleCommand();
-                cmd.Connection = con;
-                cmd.CommandText = "SOYTEX.proc_update_BenhNhan";
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new OracleParameter("p_mabn", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxMaBN.Text; ;
-                cmd.Parameters.Add(new OracleParameter("p_csyt", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxMaCSYT.Text;
-                cmd.Parameters.Add(new OracleParameter("p_patientName", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxName.Text;
-                cmd.Parameters.Add(new OracleParameter("p_id", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxID.Text;
-                cmd.Parameters.Add(new OracleParameter("p_dob", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxDOB.Text;
-                cmd.Parameters.Add(new OracleParameter("p_num", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxNum.Text;
-                cmd.Parameters.Add(new OracleParameter("p_street", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxStreet.Text;
-                cmd.Parameters.Add(new OracleParameter("p_district", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxDistrict.Text;
-                cmd.Parameters.Add(new OracleParameter("p_city", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxCity.Text;
-                cmd.Parameters.Add(new OracleParameter("p_medicalHistory", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxMedicalHistory.Text;
-                cmd.Parameters.Add(new OracleParameter("p_familyMedicalHistory", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxFamilyMedicalHistory.Text;
-                cmd.Parameters.Add(new OracleParameter("p_allergy", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxAllergy.Text;
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Đã thêm cập nhật thông tin bệnh nhân");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-
-            con.Close();
-        }
-
-        private void textBoxMaBN_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelFamilyMedicalHistory_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelID_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Patient_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonSelectInfo_Click(object sender, EventArgs e)
-        {
             string connectionString = @"Data Source=(DESCRIPTION =
             (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))
             (CONNECT_DATA =
@@ -138,6 +62,49 @@ namespace Project_ATBM
                 textBoxAllergy.Text = patientInfo.GetValue(11).ToString();
 
             }
+        }
+
+        private void buttonUpdateInfo_Click(object sender, EventArgs e)
+        {
+            string connectionString = @"Data Source=(DESCRIPTION =
+            (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))
+            (CONNECT_DATA =
+              (SERVER = DEDICATED)
+              (SERVICE_NAME = XE)
+            )
+            ); User Id = " + user_name + ";password=" + pass;
+
+            OracleConnection con = new OracleConnection();
+            con.ConnectionString = connectionString;
+            con.Open();
+
+            try
+            {
+                OracleCommand cmd = new OracleCommand();
+                cmd.Connection = con;
+                cmd.CommandText = "SOYTEX.proc_update_BenhNhan";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new OracleParameter("p_mabn", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxMaBN.Text;
+                cmd.Parameters.Add(new OracleParameter("p_csyt", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxMaCSYT.Text;
+                cmd.Parameters.Add(new OracleParameter("p_patientName", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxName.Text;
+                cmd.Parameters.Add(new OracleParameter("p_id", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxID.Text;
+                cmd.Parameters.Add(new OracleParameter("p_dob", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxDOB.Text;
+                cmd.Parameters.Add(new OracleParameter("p_num", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxNum.Text;
+                cmd.Parameters.Add(new OracleParameter("p_street", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxStreet.Text;
+                cmd.Parameters.Add(new OracleParameter("p_district", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxDistrict.Text;
+                cmd.Parameters.Add(new OracleParameter("p_city", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxCity.Text;
+                cmd.Parameters.Add(new OracleParameter("p_medicalHistory", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxMedicalHistory.Text;
+                cmd.Parameters.Add(new OracleParameter("p_familyMedicalHistory", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxFamilyMedicalHistory.Text;
+                cmd.Parameters.Add(new OracleParameter("p_allergy", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxAllergy.Text;
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Đã thêm cập nhật thông tin bệnh nhân");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+            con.Close();
         }
     }
 }
