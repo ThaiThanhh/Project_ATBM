@@ -103,6 +103,7 @@
             this.Header.Size = new System.Drawing.Size(171, 25);
             this.Header.TabIndex = 7;
             this.Header.Text = "Welcome Bác Sĩ";
+            this.Header.Click += new System.EventHandler(this.Header_Click);
             // 
             // panel2
             // 

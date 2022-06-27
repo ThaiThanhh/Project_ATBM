@@ -146,6 +146,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="MedicalRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicalRecord.Designer.cs">
+      <DependentUpon>MedicalRecord.cs</DependentUpon>
+    </Compile>
     <Compile Include="PanelPhanHe1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecord.resx">
+      <DependentUpon>MedicalRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PanelPhanHe1.resx">
       <DependentUpon>PanelPhanHe1.cs</DependentUpon>

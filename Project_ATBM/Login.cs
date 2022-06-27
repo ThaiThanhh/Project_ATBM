@@ -80,6 +80,13 @@ namespace Project_ATBM
                 {
 
                 }
+                else if (role == "Co so y te")
+                {
+                    MedicalRecord form = new MedicalRecord(username, password);
+                    this.Hide();
+                    form.Show();
+                    con.Close();
+                }
             }
             catch (OracleException ex)
             {
