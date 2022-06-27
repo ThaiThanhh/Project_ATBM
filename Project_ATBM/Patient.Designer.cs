@@ -54,6 +54,7 @@
             this.labelStreet = new System.Windows.Forms.Label();
             this.labelCity = new System.Windows.Forms.Label();
             this.buttonUpdate = new System.Windows.Forms.Button();
+            this.buttonSelectInfo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Header
@@ -337,19 +338,31 @@
             // buttonUpdate
             // 
             this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpdate.Location = new System.Drawing.Point(327, 365);
+            this.buttonUpdate.Location = new System.Drawing.Point(430, 365);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(162, 54);
+            this.buttonUpdate.Size = new System.Drawing.Size(129, 41);
             this.buttonUpdate.TabIndex = 2;
             this.buttonUpdate.Text = "Cập nhật";
             this.buttonUpdate.UseVisualStyleBackColor = true;
             this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
+            // 
+            // buttonSelectInfo
+            // 
+            this.buttonSelectInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSelectInfo.Location = new System.Drawing.Point(206, 365);
+            this.buttonSelectInfo.Name = "buttonSelectInfo";
+            this.buttonSelectInfo.Size = new System.Drawing.Size(179, 41);
+            this.buttonSelectInfo.TabIndex = 25;
+            this.buttonSelectInfo.Text = "Xem thông tin";
+            this.buttonSelectInfo.UseVisualStyleBackColor = true;
+            this.buttonSelectInfo.Click += new System.EventHandler(this.buttonSelectInfo_Click);
             // 
             // Patient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(816, 450);
+            this.Controls.Add(this.buttonSelectInfo);
             this.Controls.Add(this.textBoxCity);
             this.Controls.Add(this.textBoxStreet);
             this.Controls.Add(this.textBoxDistrict);
@@ -412,5 +425,6 @@
         private System.Windows.Forms.Label labelStreet;
         private System.Windows.Forms.Label labelCity;
         private System.Windows.Forms.Button buttonUpdate;
+        private System.Windows.Forms.Button buttonSelectInfo;
     }
 }
