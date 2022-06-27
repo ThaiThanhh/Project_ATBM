@@ -63,6 +63,7 @@ namespace Project_ATBM
                 textBoxMedicalHistory.Text = patientInfo.GetValue(9).ToString();
                 textBoxFamilyMedicalHistory.Text = patientInfo.GetValue(10).ToString();
                 textBoxAllergy.Text = patientInfo.GetValue(11).ToString();
+                
             }
         }
 
@@ -71,7 +72,7 @@ namespace Project_ATBM
 
         }
 
-        private void buttonUpdateProfile_Click(object sender, EventArgs e)
+        private void buttonUpdate_Click(object sender, EventArgs e)
         {
             string connectionString = @"Data Source=(DESCRIPTION =
             (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))
@@ -85,33 +86,53 @@ namespace Project_ATBM
             con.ConnectionString = connectionString;
             con.Open();
 
-            string v_mabn = textBoxMaBN.Text;
-            string v_name = textBoxName.Text;
-            string v_id = textBoxID.Text;
-            string v_dob = textBoxDOB.Text;
-            string v_num = textBoxNum.Text;
-            string v_street = textBoxStreet.Text;
-            string v_district = textBoxDistrict.Text;
-            string v_city = textBoxCity.Text;
-            string v_medicalHistory = textBoxMedicalHistory.Text;
-            string v_familyMedicalHistory = textBoxFamilyMedicalHistory.Text;
-            string v_allergyt = textBoxAllergy.Text;
-
-            OracleCommand command = new OracleCommand();
-            command.Connection = con;
-            command.CommandText = $"UPDATE SOYTEX.BenhNhan SET TenBN = '{v_name}', CMND = '{v_id}', NgaySinh = TO_DATE('{v_dob}', 'DD-MM-YYYY'), SoNha = '{v_num}', TenDuong = '{v_street}', QuanHuyen = '{v_district}', TinhTP = '{v_city}', TienSuBenh = '{v_medicalHistory}', TienSuBenhGD = '{v_familyMedicalHistory}', DiUngThuoc = '{v_allergyt}'";
-            command.CommandType = CommandType.Text;
-            int rows_affected = command.ExecuteNonQuery();
-
-            if (rows_affected == 1)
+            try
             {
-                MessageBox.Show("cập nhật thành công");
+                OracleCommand cmd = new OracleCommand();
+                cmd.Connection = con;
+                cmd.CommandText = "SOYTEX.proc_update_BenhNhan";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new OracleParameter("p_mabn", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxMaBN.Text; ;
+                cmd.Parameters.Add(new OracleParameter("p_csyt", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxMaCSYT.Text;
+                cmd.Parameters.Add(new OracleParameter("p_patientName", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxName.Text;
+                cmd.Parameters.Add(new OracleParameter("p_id", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxID.Text;
+                cmd.Parameters.Add(new OracleParameter("p_dob", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxDOB.Text;
+                cmd.Parameters.Add(new OracleParameter("p_num", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxNum.Text;
+                cmd.Parameters.Add(new OracleParameter("p_street", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxStreet.Text;
+                cmd.Parameters.Add(new OracleParameter("p_district", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxDistrict.Text;
+                cmd.Parameters.Add(new OracleParameter("p_city", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxCity.Text;
+                cmd.Parameters.Add(new OracleParameter("p_medicalHistory", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxMedicalHistory.Text;
+                cmd.Parameters.Add(new OracleParameter("p_familyMedicalHistory", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxFamilyMedicalHistory.Text;
+                cmd.Parameters.Add(new OracleParameter("p_allergy", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxAllergy.Text;
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Đã thêm cập nhật thông tin bệnh nhân");
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("cập nhật thất bại");
+                MessageBox.Show(ex.ToString());
             }
+
             con.Close();
+        }
+
+        private void textBoxMaBN_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelFamilyMedicalHistory_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelID_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Patient_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
