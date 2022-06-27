@@ -172,6 +172,12 @@
     <Compile Include="QuanLyRole.Designer.cs">
       <DependentUpon>QuanLyRole.cs</DependentUpon>
     </Compile>
+    <Compile Include="Researcher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Researcher.Designer.cs">
+      <DependentUpon>Researcher.cs</DependentUpon>
+    </Compile>
     <Compile Include="RevokePrivs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyRole.resx">
       <DependentUpon>QuanLyRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Researcher.resx">
+      <DependentUpon>Researcher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RevokePrivs.resx">
       <DependentUpon>RevokePrivs.cs</DependentUpon>

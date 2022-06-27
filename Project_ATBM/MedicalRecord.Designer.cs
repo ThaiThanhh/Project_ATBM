@@ -32,7 +32,6 @@
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonViewHSBADV = new System.Windows.Forms.Button();
             this.label_Header = new System.Windows.Forms.Label();
-            this.labelPatient = new System.Windows.Forms.Label();
             this.labelDiagnose = new System.Windows.Forms.Label();
             this.labelDoctor = new System.Windows.Forms.Label();
             this.labelMajor = new System.Windows.Forms.Label();
@@ -97,13 +96,6 @@
             this.label_Header.Name = "label_Header";
             this.label_Header.Size = new System.Drawing.Size(100, 23);
             this.label_Header.TabIndex = 16;
-            // 
-            // labelPatient
-            // 
-            this.labelPatient.Location = new System.Drawing.Point(0, 0);
-            this.labelPatient.Name = "labelPatient";
-            this.labelPatient.Size = new System.Drawing.Size(100, 23);
-            this.labelPatient.TabIndex = 15;
             // 
             // labelDiagnose
             // 
@@ -303,7 +295,6 @@
             this.Controls.Add(this.labelMajor);
             this.Controls.Add(this.labelDoctor);
             this.Controls.Add(this.labelDiagnose);
-            this.Controls.Add(this.labelPatient);
             this.Controls.Add(this.label_Header);
             this.Controls.Add(this.buttonViewHSBADV);
             this.Controls.Add(this.buttonDelete);
@@ -323,7 +314,6 @@
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonViewHSBADV;
         private System.Windows.Forms.Label label_Header;
-        private System.Windows.Forms.Label labelPatient;
         private System.Windows.Forms.Label labelDiagnose;
         private System.Windows.Forms.Label labelDoctor;
         private System.Windows.Forms.Label labelMajor;
