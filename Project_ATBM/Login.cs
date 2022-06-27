@@ -64,14 +64,17 @@ namespace Project_ATBM
 
                 if (role == "Thanh tra")
                 {
-                    ThanhTra form = new ThanhTra(username, name);
+                    ThanhTra form = new ThanhTra(username, name, password);
                     this.Hide();
                     form.Show();
                     con.Close();
                 }
                 else if (role == "Y si/ Bac si")
                 {
-
+                    BacSi form = new BacSi(username, name, password);
+                    this.Hide();
+                    form.Show();
+                    con.Close();
                 }
                 else if (role == "Nghien cuu")
                 {

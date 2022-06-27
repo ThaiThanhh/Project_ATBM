@@ -140,6 +140,7 @@
             this.checkedListBox1.Size = new System.Drawing.Size(175, 119);
             this.checkedListBox1.TabIndex = 11;
             this.checkedListBox1.Visible = false;
+            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // label4
             // 

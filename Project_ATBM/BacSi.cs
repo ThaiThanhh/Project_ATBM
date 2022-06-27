@@ -118,10 +118,5 @@ namespace Project_ATBM
             BS_dataGridView.DataSource = table;
             con.Close();
         }
-
-        private void Header_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
