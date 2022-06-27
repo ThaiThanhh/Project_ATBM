@@ -84,7 +84,6 @@ namespace Project_ATBM
                 cmd.Connection = con;
                 cmd.CommandText = "SOYTEX.proc_update_BenhNhan";
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new OracleParameter("p_mabn", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxMaBN.Text;
                 cmd.Parameters.Add(new OracleParameter("p_csyt", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxMaCSYT.Text;
                 cmd.Parameters.Add(new OracleParameter("p_patientName", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxName.Text;
                 cmd.Parameters.Add(new OracleParameter("p_id", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxID.Text;
@@ -97,7 +96,7 @@ namespace Project_ATBM
                 cmd.Parameters.Add(new OracleParameter("p_familyMedicalHistory", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxFamilyMedicalHistory.Text;
                 cmd.Parameters.Add(new OracleParameter("p_allergy", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxAllergy.Text;
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Đã thêm cập nhật thông tin bệnh nhân");
+                MessageBox.Show("Đã thêm cập nhật thông tin bệnh nhân", "", MessageBoxButtons.OK);
             }
             catch (Exception ex)
             {
