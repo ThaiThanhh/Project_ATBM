@@ -38,10 +38,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(389, 9);
+            this.label1.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(378, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 24);
+            this.label1.Size = new System.Drawing.Size(95, 33);
             this.label1.TabIndex = 40;
             this.label1.Text = "Hồ sơ";
             // 
@@ -56,16 +56,16 @@
             this.listMedicalRecord.ReadOnly = true;
             this.listMedicalRecord.RowHeadersWidth = 62;
             this.listMedicalRecord.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.listMedicalRecord.Size = new System.Drawing.Size(811, 387);
+            this.listMedicalRecord.Size = new System.Drawing.Size(796, 387);
             this.listMedicalRecord.TabIndex = 38;
             // 
             // buttonViewHSBA
             // 
             this.buttonViewHSBA.AutoSize = true;
-            this.buttonViewHSBA.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.buttonViewHSBA.Location = new System.Drawing.Point(223, 470);
+            this.buttonViewHSBA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonViewHSBA.Location = new System.Drawing.Point(188, 470);
             this.buttonViewHSBA.Name = "buttonViewHSBA";
-            this.buttonViewHSBA.Size = new System.Drawing.Size(193, 40);
+            this.buttonViewHSBA.Size = new System.Drawing.Size(209, 40);
             this.buttonViewHSBA.TabIndex = 37;
             this.buttonViewHSBA.Text = "Xem hồ sơ bệnh án";
             this.buttonViewHSBA.UseVisualStyleBackColor = true;
@@ -74,10 +74,10 @@
             // buttonViewHSBADV
             // 
             this.buttonViewHSBADV.AutoSize = true;
-            this.buttonViewHSBADV.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.buttonViewHSBADV.Location = new System.Drawing.Point(435, 470);
+            this.buttonViewHSBADV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonViewHSBADV.Location = new System.Drawing.Point(414, 470);
             this.buttonViewHSBADV.Name = "buttonViewHSBADV";
-            this.buttonViewHSBADV.Size = new System.Drawing.Size(193, 40);
+            this.buttonViewHSBADV.Size = new System.Drawing.Size(284, 40);
             this.buttonViewHSBADV.TabIndex = 32;
             this.buttonViewHSBADV.Text = "Xem hồ sơ bệnh án dịch vụ";
             this.buttonViewHSBADV.UseVisualStyleBackColor = true;
