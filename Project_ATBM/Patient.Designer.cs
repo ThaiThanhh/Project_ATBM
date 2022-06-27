@@ -73,7 +73,7 @@
             this.textBoxCity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxCity.Enabled = false;
             this.textBoxCity.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.textBoxCity.Location = new System.Drawing.Point(543, 303);
+            this.textBoxCity.Location = new System.Drawing.Point(551, 303);
             this.textBoxCity.Name = "textBoxCity";
             this.textBoxCity.Size = new System.Drawing.Size(236, 27);
             this.textBoxCity.TabIndex = 24;
@@ -93,7 +93,7 @@
             this.textBoxStreet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxStreet.Enabled = false;
             this.textBoxStreet.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.textBoxStreet.Location = new System.Drawing.Point(543, 256);
+            this.textBoxStreet.Location = new System.Drawing.Point(551, 256);
             this.textBoxStreet.Name = "textBoxStreet";
             this.textBoxStreet.Size = new System.Drawing.Size(236, 27);
             this.textBoxStreet.TabIndex = 22;
@@ -113,7 +113,7 @@
             this.labelDistrict.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.labelDistrict.AutoSize = true;
             this.labelDistrict.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.labelDistrict.Location = new System.Drawing.Point(41, 306);
+            this.labelDistrict.Location = new System.Drawing.Point(24, 306);
             this.labelDistrict.Name = "labelDistrict";
             this.labelDistrict.Size = new System.Drawing.Size(92, 20);
             this.labelDistrict.TabIndex = 20;
@@ -125,7 +125,7 @@
             this.textBoxFamilyMedicalHistory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxFamilyMedicalHistory.Enabled = false;
             this.textBoxFamilyMedicalHistory.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.textBoxFamilyMedicalHistory.Location = new System.Drawing.Point(543, 162);
+            this.textBoxFamilyMedicalHistory.Location = new System.Drawing.Point(551, 162);
             this.textBoxFamilyMedicalHistory.Name = "textBoxFamilyMedicalHistory";
             this.textBoxFamilyMedicalHistory.Size = new System.Drawing.Size(236, 27);
             this.textBoxFamilyMedicalHistory.TabIndex = 11;
@@ -145,7 +145,7 @@
             this.labelName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.labelName.Location = new System.Drawing.Point(41, 118);
+            this.labelName.Location = new System.Drawing.Point(24, 118);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(105, 20);
             this.labelName.TabIndex = 4;
@@ -169,7 +169,7 @@
             this.labelMaBN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.labelMaBN.AutoSize = true;
             this.labelMaBN.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.labelMaBN.Location = new System.Drawing.Point(41, 71);
+            this.labelMaBN.Location = new System.Drawing.Point(24, 71);
             this.labelMaBN.Name = "labelMaBN";
             this.labelMaBN.Size = new System.Drawing.Size(103, 20);
             this.labelMaBN.TabIndex = 1;
@@ -179,6 +179,7 @@
             // textBoxMaBN
             // 
             this.textBoxMaBN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxMaBN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBoxMaBN.Enabled = false;
             this.textBoxMaBN.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.textBoxMaBN.Location = new System.Drawing.Point(150, 68);
@@ -205,7 +206,7 @@
             this.textBoxMaCSYT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxMaCSYT.Enabled = false;
             this.textBoxMaCSYT.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.textBoxMaCSYT.Location = new System.Drawing.Point(543, 68);
+            this.textBoxMaCSYT.Location = new System.Drawing.Point(551, 68);
             this.textBoxMaCSYT.Name = "textBoxMaCSYT";
             this.textBoxMaCSYT.Size = new System.Drawing.Size(236, 27);
             this.textBoxMaCSYT.TabIndex = 3;
@@ -215,7 +216,7 @@
             this.textBoxAllergy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxAllergy.Enabled = false;
             this.textBoxAllergy.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.textBoxAllergy.Location = new System.Drawing.Point(543, 209);
+            this.textBoxAllergy.Location = new System.Drawing.Point(551, 209);
             this.textBoxAllergy.Name = "textBoxAllergy";
             this.textBoxAllergy.Size = new System.Drawing.Size(236, 27);
             this.textBoxAllergy.TabIndex = 13;
@@ -225,7 +226,7 @@
             this.labelDOB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.labelDOB.AutoSize = true;
             this.labelDOB.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.labelDOB.Location = new System.Drawing.Point(41, 212);
+            this.labelDOB.Location = new System.Drawing.Point(24, 212);
             this.labelDOB.Name = "labelDOB";
             this.labelDOB.Size = new System.Drawing.Size(74, 20);
             this.labelDOB.TabIndex = 14;
@@ -272,7 +273,7 @@
             this.labelMedicalHistory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.labelMedicalHistory.AutoSize = true;
             this.labelMedicalHistory.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.labelMedicalHistory.Location = new System.Drawing.Point(41, 165);
+            this.labelMedicalHistory.Location = new System.Drawing.Point(24, 165);
             this.labelMedicalHistory.Name = "labelMedicalHistory";
             this.labelMedicalHistory.Size = new System.Drawing.Size(93, 20);
             this.labelMedicalHistory.TabIndex = 6;
@@ -284,7 +285,7 @@
             this.textBoxID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxID.Enabled = false;
             this.textBoxID.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.textBoxID.Location = new System.Drawing.Point(543, 115);
+            this.textBoxID.Location = new System.Drawing.Point(551, 115);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.Size = new System.Drawing.Size(236, 27);
             this.textBoxID.TabIndex = 9;
@@ -304,7 +305,7 @@
             this.labelNum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.labelNum.AutoSize = true;
             this.labelNum.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.labelNum.Location = new System.Drawing.Point(41, 259);
+            this.labelNum.Location = new System.Drawing.Point(24, 259);
             this.labelNum.Name = "labelNum";
             this.labelNum.Size = new System.Drawing.Size(54, 20);
             this.labelNum.TabIndex = 17;
