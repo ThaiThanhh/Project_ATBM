@@ -116,13 +116,14 @@ Begin
         
         elsif (user_role = 'CSYT') then
             RETURN '(MACSYT in (select CSYT from SOYTEX.NHANVIEN WHERE MANV = ''' || usr ||''')) AND(EXTRACT(DAY FROM Ngay) >= 5) AND (EXTRACT(DAY FROM Ngay) <= 27) AND (EXTRACT(MONTH FROM Ngay) = EXTRACT(MONTH FROM SYSDATE))';
+        
+        elsif (user_role = 'THANHTRA') then
+            return '1 = 1';
             
         end if;
     END LOOP;
     
     CLOSE CUR;
-    
-    return '';
 End;
 
 begin
@@ -171,13 +172,15 @@ Begin
         
         elsif (user_role = 'CSYT') then
             RETURN '(MAHSBA in (select MAHSBA from SOYTEX.HSBA, SOYTEX.NhanVien WHERE CSYT = MaCSYT AND MaNV = ''' || usr ||''')) AND (EXTRACT(DAY FROM Ngay) >= 5) AND (EXTRACT(DAY FROM Ngay) <= 27) AND (EXTRACT(MONTH FROM Ngay) = EXTRACT(MONTH FROM SYSDATE))';
-   
+        
+        elsif (user_role = 'THANHTRA') then
+            return '1 = 1';
+            
         end if;
+        
     END LOOP;
     
     CLOSE CUR;
-    
-    return '';
 End;
 
 begin
