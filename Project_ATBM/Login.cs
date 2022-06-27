@@ -78,7 +78,10 @@ namespace Project_ATBM
                 }
                 else if (role == "Nghien cuu")
                 {
-
+                    Researcher form = new Researcher(username, password);
+                    this.Hide();
+                    form.Show();
+                    con.Close();
                 }
                 else if (role == "Co so y te")
                 {
