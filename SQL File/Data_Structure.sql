@@ -26,9 +26,9 @@ create table SOYTEX.NhanVien
     HoTen nvarchar2(40),
     Phai nvarchar2(3) check (Phai in ('Nam', N'Nu')),
     NgaySinh date check (NgaySinh < sysdate),
-    CMND varchar2(12) unique,
+    CMND varchar2(12),
     QueQuan nvarchar2(200),
-    SoDT varchar2(11) unique,
+    SoDT varchar2(11),
     CSYT varchar2(15),
     VaiTro nvarchar2(12) check (VaiTro in (N'Thanh tra', N'Co so y te', N'Y si/ Bac si', N'Nghien cuu')),
     ChuyenKhoa varchar2(10)
