@@ -1,5 +1,5 @@
 -- PHAN QUYEN CHO DBA
-GRANT CREATE SESSION TO DB_ADMIN;
+GRANT CREATE SESSION TO DB_ADMIN WITH ADMIN OPTION;
 GRANT DBA TO DB_ADMIN;
 
 GRANT EXECUTE ON soytex.proc_add_user TO DB_ADMIN;
@@ -177,7 +177,6 @@ Begin
             return '1 = 1';
             
         end if;
-        
     END LOOP;
     
     CLOSE CUR;
@@ -297,6 +296,7 @@ Begin
     END LOOP;
     
     CLOSE CUR;
+    
 End;
 
 
@@ -329,6 +329,14 @@ Begin
     return '0=1';
 End;
 
+begin
+    DBMS_RLS.drop_policy
+    (
+        object_schema => 'SOYTEX',
+        object_name => 'BENHNHAN',
+        policy_name => 'TC#6_PC4'
+    );
+end;
 begin
     DBMS_RLS.add_policy
     (
