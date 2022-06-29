@@ -25,7 +25,7 @@ create table SOYTEX.NhanVien
     MaNV varchar2(15) primary key,
     HoTen nvarchar2(40),
     Phai nvarchar2(3) check (Phai in ('Nam', N'Nu')),
-    NgaySinh date check (NgaySinh < sysdate),
+    NgaySinh date,
     CMND varchar2(12),
     QueQuan nvarchar2(200),
     SoDT varchar2(11),
@@ -39,8 +39,8 @@ create table SOYTEX.BenhNhan
     MaBN varchar2(15) primary key,
     MaCSYT varchar2(15),
     TenBN nvarchar2(40),
-    CMND varchar2(12) unique,
-    NgaySinh date check (NgaySinh < sysdate),
+    CMND varchar2(12),
+    NgaySinh date,
     SoNha varchar2(20),
     TenDuong nvarchar2(30),
     QuanHuyen nvarchar2(20),
@@ -56,7 +56,7 @@ create table SOYTEX.HSBA
 (
     MaHSBA varchar2(15) primary key,
     MaBN varchar2(15),
-    Ngay date check (Ngay <= sysdate),
+    Ngay date,
     ChanDoan nvarchar2(100),
     MaBS varchar2(15),
     MaKhoa varchar2(10),
@@ -72,7 +72,7 @@ create table SOYTEX.HSBA_DV
 (
     MaHSBA varchar2(15),
     MaDV varchar2(10),
-    Ngay date check (Ngay <= sysdate),
+    Ngay date,
     MaKTV varchar2(10),
     KetQua nvarchar2(100),
 
