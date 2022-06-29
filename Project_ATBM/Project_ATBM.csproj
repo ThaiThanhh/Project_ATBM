@@ -146,6 +146,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="MedicalRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicalRecord.Designer.cs">
+      <DependentUpon>MedicalRecord.cs</DependentUpon>
+    </Compile>
     <Compile Include="PanelPhanHe1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,12 @@
     </Compile>
     <Compile Include="QuanLyRole.Designer.cs">
       <DependentUpon>QuanLyRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Researcher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Researcher.Designer.cs">
+      <DependentUpon>Researcher.cs</DependentUpon>
     </Compile>
     <Compile Include="RevokePrivs.cs">
       <SubType>Form</SubType>
@@ -220,6 +232,9 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecord.resx">
+      <DependentUpon>MedicalRecord.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PanelPhanHe1.resx">
       <DependentUpon>PanelPhanHe1.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyRole.resx">
       <DependentUpon>QuanLyRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Researcher.resx">
+      <DependentUpon>Researcher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RevokePrivs.resx">
       <DependentUpon>RevokePrivs.cs</DependentUpon>
