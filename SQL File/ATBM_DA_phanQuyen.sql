@@ -219,6 +219,9 @@ AS
 Begin
     usr := SYS_CONTEXT('userenv', 'SESSION_USER');
     
+    if (usr = 'DB_ADMIN') then
+        return '1 = 1';
+        
     OPEN CUR;
     LOOP
         FETCH CUR INTO user_role;
