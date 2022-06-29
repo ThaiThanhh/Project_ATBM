@@ -69,84 +69,84 @@
             // 
             // textBoxMaBN
             // 
-            this.textBoxMaBN.Location = new System.Drawing.Point(194, 66);
+            this.textBoxMaBN.Location = new System.Drawing.Point(193, 83);
             this.textBoxMaBN.Name = "textBoxMaBN";
             this.textBoxMaBN.Size = new System.Drawing.Size(219, 22);
             this.textBoxMaBN.TabIndex = 9;
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(194, 112);
+            this.textBoxName.Location = new System.Drawing.Point(193, 129);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(219, 22);
             this.textBoxName.TabIndex = 10;
             // 
             // textBoxMedicalHistory
             // 
-            this.textBoxMedicalHistory.Location = new System.Drawing.Point(194, 158);
+            this.textBoxMedicalHistory.Location = new System.Drawing.Point(193, 175);
             this.textBoxMedicalHistory.Name = "textBoxMedicalHistory";
             this.textBoxMedicalHistory.Size = new System.Drawing.Size(219, 22);
             this.textBoxMedicalHistory.TabIndex = 11;
             // 
             // textBoxDOB
             // 
-            this.textBoxDOB.Location = new System.Drawing.Point(194, 204);
+            this.textBoxDOB.Location = new System.Drawing.Point(193, 221);
             this.textBoxDOB.Name = "textBoxDOB";
             this.textBoxDOB.Size = new System.Drawing.Size(219, 22);
             this.textBoxDOB.TabIndex = 12;
             // 
             // textBoxNum
             // 
-            this.textBoxNum.Location = new System.Drawing.Point(194, 250);
+            this.textBoxNum.Location = new System.Drawing.Point(193, 267);
             this.textBoxNum.Name = "textBoxNum";
             this.textBoxNum.Size = new System.Drawing.Size(219, 22);
             this.textBoxNum.TabIndex = 13;
             // 
             // textBoxDistrict
             // 
-            this.textBoxDistrict.Location = new System.Drawing.Point(194, 296);
+            this.textBoxDistrict.Location = new System.Drawing.Point(193, 313);
             this.textBoxDistrict.Name = "textBoxDistrict";
             this.textBoxDistrict.Size = new System.Drawing.Size(219, 22);
             this.textBoxDistrict.TabIndex = 14;
             // 
             // textBoxMaCSYT
             // 
-            this.textBoxMaCSYT.Location = new System.Drawing.Point(614, 66);
+            this.textBoxMaCSYT.Location = new System.Drawing.Point(613, 83);
             this.textBoxMaCSYT.Name = "textBoxMaCSYT";
             this.textBoxMaCSYT.Size = new System.Drawing.Size(219, 22);
             this.textBoxMaCSYT.TabIndex = 15;
             // 
             // textBoxID
             // 
-            this.textBoxID.Location = new System.Drawing.Point(614, 112);
+            this.textBoxID.Location = new System.Drawing.Point(613, 129);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.Size = new System.Drawing.Size(219, 22);
             this.textBoxID.TabIndex = 16;
             // 
             // textBoxFamilyMedicalHistory
             // 
-            this.textBoxFamilyMedicalHistory.Location = new System.Drawing.Point(614, 158);
+            this.textBoxFamilyMedicalHistory.Location = new System.Drawing.Point(613, 175);
             this.textBoxFamilyMedicalHistory.Name = "textBoxFamilyMedicalHistory";
             this.textBoxFamilyMedicalHistory.Size = new System.Drawing.Size(219, 22);
             this.textBoxFamilyMedicalHistory.TabIndex = 17;
             // 
             // textBoxAllergy
             // 
-            this.textBoxAllergy.Location = new System.Drawing.Point(614, 204);
+            this.textBoxAllergy.Location = new System.Drawing.Point(613, 221);
             this.textBoxAllergy.Name = "textBoxAllergy";
             this.textBoxAllergy.Size = new System.Drawing.Size(219, 22);
             this.textBoxAllergy.TabIndex = 18;
             // 
             // textBoxStreet
             // 
-            this.textBoxStreet.Location = new System.Drawing.Point(614, 250);
+            this.textBoxStreet.Location = new System.Drawing.Point(613, 267);
             this.textBoxStreet.Name = "textBoxStreet";
             this.textBoxStreet.Size = new System.Drawing.Size(219, 22);
             this.textBoxStreet.TabIndex = 19;
             // 
             // textBoxCity
             // 
-            this.textBoxCity.Location = new System.Drawing.Point(614, 296);
+            this.textBoxCity.Location = new System.Drawing.Point(613, 313);
             this.textBoxCity.Name = "textBoxCity";
             this.textBoxCity.Size = new System.Drawing.Size(219, 22);
             this.textBoxCity.TabIndex = 20;
@@ -154,7 +154,7 @@
             // labelMaBN
             // 
             this.labelMaBN.AutoSize = true;
-            this.labelMaBN.Location = new System.Drawing.Point(53, 69);
+            this.labelMaBN.Location = new System.Drawing.Point(52, 86);
             this.labelMaBN.Name = "labelMaBN";
             this.labelMaBN.Size = new System.Drawing.Size(91, 16);
             this.labelMaBN.TabIndex = 21;
@@ -163,7 +163,7 @@
             // labelMedicalHistory
             // 
             this.labelMedicalHistory.AutoSize = true;
-            this.labelMedicalHistory.Location = new System.Drawing.Point(53, 161);
+            this.labelMedicalHistory.Location = new System.Drawing.Point(52, 178);
             this.labelMedicalHistory.Name = "labelMedicalHistory";
             this.labelMedicalHistory.Size = new System.Drawing.Size(84, 16);
             this.labelMedicalHistory.TabIndex = 22;
@@ -172,7 +172,7 @@
             // labelFamilyMedicalHistory
             // 
             this.labelFamilyMedicalHistory.AutoSize = true;
-            this.labelFamilyMedicalHistory.Location = new System.Drawing.Point(461, 164);
+            this.labelFamilyMedicalHistory.Location = new System.Drawing.Point(460, 181);
             this.labelFamilyMedicalHistory.Name = "labelFamilyMedicalHistory";
             this.labelFamilyMedicalHistory.Size = new System.Drawing.Size(134, 16);
             this.labelFamilyMedicalHistory.TabIndex = 23;
@@ -181,7 +181,7 @@
             // labelAllergy
             // 
             this.labelAllergy.AutoSize = true;
-            this.labelAllergy.Location = new System.Drawing.Point(461, 210);
+            this.labelAllergy.Location = new System.Drawing.Point(460, 227);
             this.labelAllergy.Name = "labelAllergy";
             this.labelAllergy.Size = new System.Drawing.Size(80, 16);
             this.labelAllergy.TabIndex = 24;
@@ -190,7 +190,7 @@
             // labelNum
             // 
             this.labelNum.AutoSize = true;
-            this.labelNum.Location = new System.Drawing.Point(53, 253);
+            this.labelNum.Location = new System.Drawing.Point(52, 270);
             this.labelNum.Name = "labelNum";
             this.labelNum.Size = new System.Drawing.Size(49, 16);
             this.labelNum.TabIndex = 25;
@@ -199,7 +199,7 @@
             // labelDistrict
             // 
             this.labelDistrict.AutoSize = true;
-            this.labelDistrict.Location = new System.Drawing.Point(53, 299);
+            this.labelDistrict.Location = new System.Drawing.Point(52, 316);
             this.labelDistrict.Name = "labelDistrict";
             this.labelDistrict.Size = new System.Drawing.Size(82, 16);
             this.labelDistrict.TabIndex = 26;
@@ -208,7 +208,7 @@
             // labelMaCSYT
             // 
             this.labelMaCSYT.AutoSize = true;
-            this.labelMaCSYT.Location = new System.Drawing.Point(461, 72);
+            this.labelMaCSYT.Location = new System.Drawing.Point(460, 89);
             this.labelMaCSYT.Name = "labelMaCSYT";
             this.labelMaCSYT.Size = new System.Drawing.Size(65, 16);
             this.labelMaCSYT.TabIndex = 27;
@@ -217,7 +217,7 @@
             // labelID
             // 
             this.labelID.AutoSize = true;
-            this.labelID.Location = new System.Drawing.Point(461, 118);
+            this.labelID.Location = new System.Drawing.Point(460, 135);
             this.labelID.Name = "labelID";
             this.labelID.Size = new System.Drawing.Size(47, 16);
             this.labelID.TabIndex = 28;
@@ -226,7 +226,7 @@
             // labelStreet
             // 
             this.labelStreet.AutoSize = true;
-            this.labelStreet.Location = new System.Drawing.Point(461, 256);
+            this.labelStreet.Location = new System.Drawing.Point(460, 273);
             this.labelStreet.Name = "labelStreet";
             this.labelStreet.Size = new System.Drawing.Size(46, 16);
             this.labelStreet.TabIndex = 29;
@@ -235,7 +235,7 @@
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(53, 115);
+            this.labelName.Location = new System.Drawing.Point(52, 132);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(96, 16);
             this.labelName.TabIndex = 30;
@@ -244,7 +244,7 @@
             // labelDOB
             // 
             this.labelDOB.AutoSize = true;
-            this.labelDOB.Location = new System.Drawing.Point(53, 207);
+            this.labelDOB.Location = new System.Drawing.Point(52, 224);
             this.labelDOB.Name = "labelDOB";
             this.labelDOB.Size = new System.Drawing.Size(67, 16);
             this.labelDOB.TabIndex = 31;
@@ -253,7 +253,7 @@
             // labelCity
             // 
             this.labelCity.AutoSize = true;
-            this.labelCity.Location = new System.Drawing.Point(461, 302);
+            this.labelCity.Location = new System.Drawing.Point(460, 319);
             this.labelCity.Name = "labelCity";
             this.labelCity.Size = new System.Drawing.Size(101, 16);
             this.labelCity.TabIndex = 32;
@@ -263,7 +263,7 @@
             // 
             this.buttonUpdateInfo.AutoSize = true;
             this.buttonUpdateInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpdateInfo.Location = new System.Drawing.Point(342, 371);
+            this.buttonUpdateInfo.Location = new System.Drawing.Point(341, 388);
             this.buttonUpdateInfo.Name = "buttonUpdateInfo";
             this.buttonUpdateInfo.Size = new System.Drawing.Size(199, 35);
             this.buttonUpdateInfo.TabIndex = 33;
@@ -275,7 +275,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(877, 450);
+            this.ClientSize = new System.Drawing.Size(882, 453);
             this.Controls.Add(this.buttonUpdateInfo);
             this.Controls.Add(this.labelCity);
             this.Controls.Add(this.labelDOB);

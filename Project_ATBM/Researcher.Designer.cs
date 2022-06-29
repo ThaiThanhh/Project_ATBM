@@ -32,6 +32,7 @@
             this.listMedicalRecord = new System.Windows.Forms.DataGridView();
             this.buttonViewHSBA = new System.Windows.Forms.Button();
             this.buttonViewHSBADV = new System.Windows.Forms.Button();
+            this.buttonShowProfile = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.listMedicalRecord)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,11 +84,24 @@
             this.buttonViewHSBADV.UseVisualStyleBackColor = true;
             this.buttonViewHSBADV.Click += new System.EventHandler(this.buttonViewHSBADV_Click);
             // 
+            // buttonShowProfile
+            // 
+            this.buttonShowProfile.AutoSize = true;
+            this.buttonShowProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonShowProfile.Location = new System.Drawing.Point(307, 519);
+            this.buttonShowProfile.Name = "buttonShowProfile";
+            this.buttonShowProfile.Size = new System.Drawing.Size(238, 35);
+            this.buttonShowProfile.TabIndex = 41;
+            this.buttonShowProfile.Text = "Xem thông tin cá nhân";
+            this.buttonShowProfile.UseVisualStyleBackColor = true;
+            this.buttonShowProfile.Click += new System.EventHandler(this.buttonShowProfile_Click);
+            // 
             // Researcher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(853, 541);
+            this.ClientSize = new System.Drawing.Size(853, 566);
+            this.Controls.Add(this.buttonShowProfile);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listMedicalRecord);
             this.Controls.Add(this.buttonViewHSBA);
@@ -106,5 +120,6 @@
         private System.Windows.Forms.DataGridView listMedicalRecord;
         private System.Windows.Forms.Button buttonViewHSBA;
         private System.Windows.Forms.Button buttonViewHSBADV;
+        private System.Windows.Forms.Button buttonShowProfile;
     }
 }

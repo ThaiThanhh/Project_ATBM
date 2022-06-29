@@ -34,6 +34,10 @@ GRANT SELECT ON soytex.benhnhan TO THANHTRA;
 GRANT SELECT ON soytex.hsba TO THANHTRA;
 GRANT SELECT ON soytex.hsba_dv TO THANHTRA;
 
+GRANT EXECUTE ON SOYTEX.proc_insert_HSBA TO CSYT;
+GRANT EXECUTE ON SOYTEX.proc_update_NhanVien TO YSI_BACSI, NGHIENCUU, CSYT, THANHTRA;
+GRANT EXECUTE ON SOYTEX.proc_update_BenhNhan TO BENHNHAN;
+
 --VPD
 --TC#3:
 -- tai khoan cua csyt nao thi them, xoa hsba thuoc csyt do
