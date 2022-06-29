@@ -37,6 +37,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.searchBox = new System.Windows.Forms.TextBox();
+            this.buttonShowProfile = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BS_dataGridView)).BeginInit();
             this.panel2.SuspendLayout();
@@ -139,11 +140,24 @@
             this.searchBox.TextChanged += new System.EventHandler(this.textBox1_Enter);
             this.searchBox.Enter += new System.EventHandler(this.textBox1_Enter);
             // 
+            // buttonShowProfile
+            // 
+            this.buttonShowProfile.AutoSize = true;
+            this.buttonShowProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonShowProfile.Location = new System.Drawing.Point(365, 528);
+            this.buttonShowProfile.Name = "buttonShowProfile";
+            this.buttonShowProfile.Size = new System.Drawing.Size(238, 35);
+            this.buttonShowProfile.TabIndex = 12;
+            this.buttonShowProfile.Text = "Xem thông tin cá nhân";
+            this.buttonShowProfile.UseVisualStyleBackColor = true;
+            this.buttonShowProfile.Click += new System.EventHandler(this.buttonShowProfile_Click);
+            // 
             // BacSi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(968, 546);
+            this.ClientSize = new System.Drawing.Size(968, 575);
+            this.Controls.Add(this.buttonShowProfile);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);
@@ -172,5 +186,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox searchBox;
+        private System.Windows.Forms.Button buttonShowProfile;
     }
 }

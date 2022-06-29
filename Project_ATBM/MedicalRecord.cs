@@ -15,11 +15,13 @@ namespace Project_ATBM
     {
         string user_name = "";
         string pass = "";
-        public MedicalRecord(string username, string password)
+        string name_NVCSYT = "";
+        public MedicalRecord(string username, string name, string password)
         {
             InitializeComponent();
             user_name = username;
             pass = password;
+            name_NVCSYT = name;
         }
 
 
@@ -199,6 +201,12 @@ namespace Project_ATBM
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonShowProfile_Click(object sender, EventArgs e)
+        {
+            StaffProfile form = new StaffProfile(user_name, name_NVCSYT, pass);
+            form.Show();
         }
     }
 }

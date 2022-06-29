@@ -14,12 +14,14 @@ namespace Project_ATBM
     {
         string user_name = "";
         string pass = "";
+        string name_ThanhTra = "";
         public ThanhTra(string username,string name, string password)
         {
             InitializeComponent();
             Header.Text = Header.Text + " " + username;
             user_name = username;
             pass = password;
+            name_ThanhTra = name;
         }
 
         private void ThanhTra_Load(object sender, EventArgs e)
@@ -83,6 +85,12 @@ namespace Project_ATBM
         private void ThanhTra_dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void buttonShowProfile_Click(object sender, EventArgs e)
+        {
+            StaffProfile form = new StaffProfile(user_name, name_ThanhTra, pass);
+            form.Show();
         }
     }
 }

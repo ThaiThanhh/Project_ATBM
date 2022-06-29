@@ -33,6 +33,7 @@
             this.ThanhTra_dataGridView = new System.Windows.Forms.DataGridView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.buttonShowProfile = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ThanhTra_dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -42,9 +43,9 @@
             this.Header.AutoSize = true;
             this.Header.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Header.ForeColor = System.Drawing.Color.Red;
-            this.Header.Location = new System.Drawing.Point(349, 39);
+            this.Header.Location = new System.Drawing.Point(310, 31);
             this.Header.Name = "Header";
-            this.Header.Size = new System.Drawing.Size(249, 29);
+            this.Header.Size = new System.Drawing.Size(209, 25);
             this.Header.TabIndex = 0;
             this.Header.Text = "Welcome Thanh Tra";
             // 
@@ -52,9 +53,10 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.panel1.Controls.Add(this.ThanhTra_dataGridView);
-            this.panel1.Location = new System.Drawing.Point(67, 190);
+            this.panel1.Location = new System.Drawing.Point(60, 152);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(896, 446);
+            this.panel1.Size = new System.Drawing.Size(796, 357);
             this.panel1.TabIndex = 3;
             // 
             // ThanhTra_dataGridView
@@ -62,11 +64,12 @@
             this.ThanhTra_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.ThanhTra_dataGridView.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.ThanhTra_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ThanhTra_dataGridView.Location = new System.Drawing.Point(53, 42);
+            this.ThanhTra_dataGridView.Location = new System.Drawing.Point(47, 34);
+            this.ThanhTra_dataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ThanhTra_dataGridView.Name = "ThanhTra_dataGridView";
             this.ThanhTra_dataGridView.RowHeadersWidth = 62;
             this.ThanhTra_dataGridView.RowTemplate.Height = 28;
-            this.ThanhTra_dataGridView.Size = new System.Drawing.Size(790, 375);
+            this.ThanhTra_dataGridView.Size = new System.Drawing.Size(702, 300);
             this.ThanhTra_dataGridView.TabIndex = 3;
             this.ThanhTra_dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ThanhTra_dataGridView_CellContentClick);
             // 
@@ -80,9 +83,10 @@
             "Cơ sở y tế",
             "Hồ sơ bệnh án",
             "Dịch vụ"});
-            this.comboBox1.Location = new System.Drawing.Point(250, 119);
+            this.comboBox1.Location = new System.Drawing.Point(222, 95);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(313, 28);
+            this.comboBox1.Size = new System.Drawing.Size(279, 24);
             this.comboBox1.TabIndex = 5;
             this.comboBox1.Text = "Chọn bảng";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -92,21 +96,35 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(88, 119);
+            this.label2.Location = new System.Drawing.Point(78, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 25);
+            this.label2.Size = new System.Drawing.Size(102, 20);
             this.label2.TabIndex = 6;
             this.label2.Text = "Xem dữ liệu ";
             // 
+            // buttonShowProfile
+            // 
+            this.buttonShowProfile.AutoSize = true;
+            this.buttonShowProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonShowProfile.Location = new System.Drawing.Point(335, 527);
+            this.buttonShowProfile.Name = "buttonShowProfile";
+            this.buttonShowProfile.Size = new System.Drawing.Size(238, 35);
+            this.buttonShowProfile.TabIndex = 42;
+            this.buttonShowProfile.Text = "Xem thông tin cá nhân";
+            this.buttonShowProfile.UseVisualStyleBackColor = true;
+            this.buttonShowProfile.Click += new System.EventHandler(this.buttonShowProfile_Click);
+            // 
             // ThanhTra
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1022, 689);
+            this.ClientSize = new System.Drawing.Size(908, 574);
+            this.Controls.Add(this.buttonShowProfile);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Header);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ThanhTra";
             this.Text = "ThanhTra";
             this.Load += new System.EventHandler(this.ThanhTra_Load);
@@ -123,5 +141,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Header;
+        private System.Windows.Forms.Button buttonShowProfile;
     }
 }

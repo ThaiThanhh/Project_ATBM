@@ -15,11 +15,13 @@ namespace Project_ATBM
     {
         string user_name = "";
         string pass = "";
-        public Researcher(string username, string password)
+        string name_Reasearcher = "";
+        public Researcher(string username, string name, string password)
         {
             InitializeComponent();
             user_name = username;
             pass = password;
+            name_Reasearcher = name;
         }
         private void buttonViewHSBA_Click(object sender, EventArgs e)
         {
@@ -76,6 +78,12 @@ namespace Project_ATBM
             listMedicalRecord.DataSource = tableServiceMedicalRecord;
 
             con.Close();
+        }
+
+        private void buttonShowProfile_Click(object sender, EventArgs e)
+        {
+            StaffProfile form = new StaffProfile(user_name, name_Reasearcher, pass);
+            form.Show();
         }
     }
 }

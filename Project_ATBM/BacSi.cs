@@ -15,12 +15,14 @@ namespace Project_ATBM
     {
         string user_name = "";
         string pass = "";
+        string name_doctor = "";
         public BacSi(string username, string name, string password)
         {
             InitializeComponent();
             Header.Text = Header.Text + " " + name;
             user_name = username;
             pass = password;
+            name_doctor = name;
         }
 
         private void BS_dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -122,6 +124,12 @@ namespace Project_ATBM
         private void Header_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonShowProfile_Click(object sender, EventArgs e)
+        {
+            StaffProfile form = new StaffProfile(user_name, name_doctor, pass);
+            form.Show();
         }
     }
 }

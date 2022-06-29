@@ -51,6 +51,7 @@
             this.labelDate = new System.Windows.Forms.Label();
             this.textBoxResult = new System.Windows.Forms.TextBox();
             this.labelResult = new System.Windows.Forms.Label();
+            this.buttonShowProfile = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.listMedicalRecord)).BeginInit();
             this.SuspendLayout();
             // 
@@ -164,11 +165,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(451, 9);
+            this.label1.Location = new System.Drawing.Point(565, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 24);
+            this.label1.Size = new System.Drawing.Size(67, 24);
             this.label1.TabIndex = 17;
-            this.label1.Text = "Mai Xinh";
+            this.label1.Text = "Hồ sơ";
             // 
             // label_patient
             // 
@@ -271,11 +272,24 @@
             this.labelResult.TabIndex = 28;
             this.labelResult.Text = "Kết quả";
             // 
+            // buttonShowProfile
+            // 
+            this.buttonShowProfile.AutoSize = true;
+            this.buttonShowProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonShowProfile.Location = new System.Drawing.Point(474, 506);
+            this.buttonShowProfile.Name = "buttonShowProfile";
+            this.buttonShowProfile.Size = new System.Drawing.Size(238, 35);
+            this.buttonShowProfile.TabIndex = 30;
+            this.buttonShowProfile.Text = "Xem thông tin cá nhân";
+            this.buttonShowProfile.UseVisualStyleBackColor = true;
+            this.buttonShowProfile.Click += new System.EventHandler(this.buttonShowProfile_Click);
+            // 
             // MedicalRecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1188, 493);
+            this.ClientSize = new System.Drawing.Size(1182, 553);
+            this.Controls.Add(this.buttonShowProfile);
             this.Controls.Add(this.textBoxResult);
             this.Controls.Add(this.labelResult);
             this.Controls.Add(this.textBoxDate);
@@ -333,5 +347,6 @@
         private System.Windows.Forms.Label labelDate;
         private System.Windows.Forms.TextBox textBoxResult;
         private System.Windows.Forms.Label labelResult;
+        private System.Windows.Forms.Button buttonShowProfile;
     }
 }

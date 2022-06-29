@@ -97,14 +97,14 @@ namespace Project_ATBM
                 }
                 else if (role == "Nghien cuu")
                 {
-                    Researcher form = new Researcher(username, password);
+                    Researcher form = new Researcher(username, name, password);
                     this.Hide();
                     form.Show();
                     con.Close();
                 }
                 else if (role == "Co so y te")
                 {
-                    MedicalRecord form = new MedicalRecord(username, password);
+                    MedicalRecord form = new MedicalRecord(username, name, password);
                     this.Hide();
                     form.Show();
                     con.Close();
