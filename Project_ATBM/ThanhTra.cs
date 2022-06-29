@@ -86,11 +86,5 @@ namespace Project_ATBM
         {
 
         }
-
-        private void buttonShowProfile_Click(object sender, EventArgs e)
-        {
-            StaffProfile form = new StaffProfile(user_name, name_ThanhTra, pass);
-            form.Show();
-        }
     }
 }

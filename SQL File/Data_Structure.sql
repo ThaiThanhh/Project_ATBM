@@ -26,7 +26,7 @@ create table SOYTEX.NhanVien
     HoTen nvarchar2(40),
     Phai nvarchar2(3) check (Phai in ('Nam', N'Nu')),
     NgaySinh date,
-    CMND varchar2(12),
+    CMND varchar2(100),
     QueQuan nvarchar2(200),
     SoDT varchar2(11),
     CSYT varchar2(15),
@@ -93,32 +93,32 @@ INSERT INTO SOYTEX.CSYT VALUES('CSYT008', 'Co so y te 8', 'Da Lat', '0123456789'
 INSERT INTO SOYTEX.CSYT VALUES('CSYT009', 'Co so y te 9', 'TP Ho Chi Minh', '0123456789');
 INSERT INTO SOYTEX.CSYT VALUES('CSYT010', 'Co so y te 10', 'Binh Thuan', '0123456789');
 
-INSERT INTO SOYTEX.NhanVien VALUES('NV001', 'Nguyen Hoang Dung', 'Nam', TO_DATE('17-06-1988','dd/mm/yyyy'), '123456789', 'Binh Dinh', '0123456789', 'CSYT001', N'Co so y te', NULL);
-INSERT INTO SOYTEX.NhanVien VALUES('NV002', 'Nguyen Tuan Anh', 'Nam', TO_DATE('17-06-1988','dd/mm/yyyy'), '123456789', 'Binh Thuan', '0123456789', 'CSYT001', N'Thanh tra', NULL);
-INSERT INTO SOYTEX.NhanVien VALUES('NV003', 'Nguyen Quang Minh', 'Nam', TO_DATE('17-06-1988','dd/mm/yyyy'), '123456789', 'Binh Thuan', '0123456789', 'CSYT001', N'Thanh tra', NULL);
-INSERT INTO SOYTEX.NhanVien VALUES('NV004', 'Nguyen Kiem', 'Nam', TO_DATE('17-06-1988','dd/mm/yyyy'), '123456789', 'Binh Thuan', '0123456789', 'CSYT001', N'Thanh tra', NULL);
-INSERT INTO SOYTEX.NhanVien VALUES('NV005', 'Nguyen Tuan Tu', 'Nam', TO_DATE('17-06-1988','dd/mm/yyyy'), '123456789', 'Binh Dinh', '0123456789', 'CSYT001', N'Y si/ Bac si', 'K001');
-INSERT INTO SOYTEX.NhanVien VALUES('NV006', 'Nguyen Hoang Nhat', 'Nam', TO_DATE('17-06-1988','dd/mm/yyyy'), '123456789', 'Binh Dinh', '0123456789', 'CSYT001', N'Y si/ Bac si', 'K001');
-INSERT INTO SOYTEX.NhanVien VALUES('NV007', 'Nguyen Nhat Nam', 'Nam', TO_DATE('17-06-1988','dd/mm/yyyy'), '123456789', 'Binh Dinh', '0123456789', 'CSYT001', N'Y si/ Bac si', 'K002');
-INSERT INTO SOYTEX.NhanVien VALUES('NV008', 'Nguyen Quang Linh', 'Nam', TO_DATE('17-06-1988','dd/mm/yyyy'), '123456789', 'Binh Dinh', '0123456789', 'CSYT001', N'Y si/ Bac si', 'K002');
-INSERT INTO SOYTEX.NhanVien VALUES('NV009', 'Nguyen Tu Trinh', 'Nam', TO_DATE('17-06-1988','dd/mm/yyyy'), '123456789', 'Binh Dinh', '0123456789', 'CSYT001', N'Y si/ Bac si', 'K003');
-INSERT INTO SOYTEX.NhanVien VALUES('NV010', 'Nguyen Thuy Linh', 'Nam', TO_DATE('17-06-1988','dd/mm/yyyy'), '123456789', 'Binh Dinh', '0123456789', 'CSYT001', N'Y si/ Bac si', 'K003');
-INSERT INTO SOYTEX.NhanVien VALUES('NV011', 'Nguyen Thanh Hoang', 'Nu', TO_DATE('17-06-1988','dd/mm/yyyy'), '123456789', 'Binh Dinh', '0123456789', 'CSYT001', N'Nghien cuu', 'K001');
-INSERT INTO SOYTEX.NhanVien VALUES('NV012', 'Nguyen Thanh Thuy', 'Nu', TO_DATE('17-06-1988','dd/mm/yyyy'), '123456789', 'Binh Dinh', '0123456789', 'CSYT001', N'Nghien cuu', 'K002');
-INSERT INTO SOYTEX.NhanVien VALUES('NV013', 'Nguyen Nhat Huy', 'Nu', TO_DATE('17-06-1988','dd/mm/yyyy'), '123456789', 'Binh Dinh', '0123456789', 'CSYT001', N'Nghien cuu', 'K003');
-INSERT INTO SOYTEX.NhanVien VALUES('NV014', 'Nguyen Tam Dung', 'Nam', TO_DATE('17-06-1988','dd/mm/yyyy'), '123456789', 'Binh Dinh', '0123456789', 'CSYT002', N'Co so y te', NULL);
-INSERT INTO SOYTEX.NhanVien VALUES('NV015', 'Nguyen Lam Nhat', 'Nam', TO_DATE('17-06-1988','dd/mm/yyyy'), '123456789', 'Binh Thuan', '0123456789', 'CSYT002', N'Thanh tra', NULL);
-INSERT INTO SOYTEX.NhanVien VALUES('NV016', 'Nguyen Quang Tu', 'Nam', TO_DATE('17-06-1988','dd/mm/yyyy'), '123456789', 'Binh Thuan', '0123456789', 'CSYT002', N'Thanh tra', NULL);
-INSERT INTO SOYTEX.NhanVien VALUES('NV017', 'Nguyen Nhat Hoa', 'Nam', TO_DATE('17-06-1988','dd/mm/yyyy'), '123456789', 'Binh Thuan', '0123456789', 'CSYT002', N'Thanh tra', NULL);
-INSERT INTO SOYTEX.NhanVien VALUES('NV018', 'Nguyen Minh Tu', 'Nu', TO_DATE('17-06-1988','dd/mm/yyyy'), '123456789', 'Binh Dinh', '0123456789', 'CSYT002', N'Y si/ Bac si', 'K001');
-INSERT INTO SOYTEX.NhanVien VALUES('NV019', 'Nguyen Hoang Thuy', 'Nu', TO_DATE('17-06-1988','dd/mm/yyyy'), '123456789', 'Binh Dinh', '0123456789', 'CSYT002', N'Y si/ Bac si', 'K001');
-INSERT INTO SOYTEX.NhanVien VALUES('NV020', 'Nguyen Kieu Trinh', 'Nu', TO_DATE('17-06-1988','dd/mm/yyyy'), '123456789', 'Binh Dinh', '0123456789', 'CSYT002', N'Y si/ Bac si', 'K002');
-INSERT INTO SOYTEX.NhanVien VALUES('NV021', 'Nguyen Minh Lieu', 'Nu', TO_DATE('17-06-1988','dd/mm/yyyy'), '123456789', 'Binh Dinh', '0123456789', 'CSYT002', N'Y si/ Bac si', 'K002');
-INSERT INTO SOYTEX.NhanVien VALUES('NV022', 'Nguyen Thuy Trinh', 'Nu', TO_DATE('17-06-1988','dd/mm/yyyy'), '123456789', 'Binh Dinh', '0123456789', 'CSYT002', N'Y si/ Bac si', 'K003');
-INSERT INTO SOYTEX.NhanVien VALUES('NV023', 'Nguyen Minh Tu', 'Nu', TO_DATE('17-06-1988','dd/mm/yyyy'), '123456789', 'Binh Dinh', '0123456789', 'CSYT002', N'Y si/ Bac si', 'K003');
-INSERT INTO SOYTEX.NhanVien VALUES('NV024', 'Nguyen Thanh Nga', 'Nu', TO_DATE('17-06-1988','dd/mm/yyyy'), '123456789', 'Binh Dinh', '0123456789', 'CSYT002', N'Nghien cuu', 'K001');
-INSERT INTO SOYTEX.NhanVien VALUES('NV025', 'Nguyen Nga', 'Nu', TO_DATE('17-06-1988','dd/mm/yyyy'), '123456789', 'Binh Dinh', '0123456789', 'CSYT002', N'Nghien cuu', 'K002');
-INSERT INTO SOYTEX.NhanVien VALUES('NV026', 'Nguyen Thuy Tien', 'Nu', TO_DATE('17-06-1988','dd/mm/yyyy'), '123456789', 'Binh Dinh', '0123456789', 'CSYT002', N'Nghien cuu', 'K003');
+INSERT INTO SOYTEX.NhanVien VALUES('NV001', 'Nguyen Hoang Dung', 'Nam', TO_DATE('17-06-1988','dd/mm/yyyy'), '1234', 'Binh Dinh', '0123456789', 'CSYT001', N'Co so y te', NULL);
+INSERT INTO SOYTEX.NhanVien VALUES('NV002', 'Nguyen Tuan Anh', 'Nam', TO_DATE('17-06-1988','dd/mm/yyyy'), '1234', 'Binh Thuan', '0123456789', 'CSYT001', N'Thanh tra', NULL);
+INSERT INTO SOYTEX.NhanVien VALUES('NV003', 'Nguyen Quang Minh', 'Nam', TO_DATE('17-06-1988','dd/mm/yyyy'), '1234', 'Binh Thuan', '0123456789', 'CSYT001', N'Thanh tra', NULL);
+INSERT INTO SOYTEX.NhanVien VALUES('NV004', 'Nguyen Kiem', 'Nam', TO_DATE('17-06-1988','dd/mm/yyyy'), '1234', 'Binh Thuan', '0123456789', 'CSYT001', N'Thanh tra', NULL);
+INSERT INTO SOYTEX.NhanVien VALUES('NV005', 'Nguyen Tuan Tu', 'Nam', TO_DATE('17-06-1988','dd/mm/yyyy'), '1234', 'Binh Dinh', '0123456789', 'CSYT001', N'Y si/ Bac si', 'K001');
+INSERT INTO SOYTEX.NhanVien VALUES('NV006', 'Nguyen Hoang Nhat', 'Nam', TO_DATE('17-06-1988','dd/mm/yyyy'), '1234', 'Binh Dinh', '0123456789', 'CSYT001', N'Y si/ Bac si', 'K001');
+INSERT INTO SOYTEX.NhanVien VALUES('NV007', 'Nguyen Nhat Nam', 'Nam', TO_DATE('17-06-1988','dd/mm/yyyy'), '1234', 'Binh Dinh', '0123456789', 'CSYT001', N'Y si/ Bac si', 'K002');
+INSERT INTO SOYTEX.NhanVien VALUES('NV008', 'Nguyen Quang Linh', 'Nam', TO_DATE('17-06-1988','dd/mm/yyyy'), '1234', 'Binh Dinh', '0123456789', 'CSYT001', N'Y si/ Bac si', 'K002');
+INSERT INTO SOYTEX.NhanVien VALUES('NV009', 'Nguyen Tu Trinh', 'Nam', TO_DATE('17-06-1988','dd/mm/yyyy'), '1234', 'Binh Dinh', '0123456789', 'CSYT001', N'Y si/ Bac si', 'K003');
+INSERT INTO SOYTEX.NhanVien VALUES('NV010', 'Nguyen Thuy Linh', 'Nam', TO_DATE('17-06-1988','dd/mm/yyyy'), '1234', 'Binh Dinh', '0123456789', 'CSYT001', N'Y si/ Bac si', 'K003');
+INSERT INTO SOYTEX.NhanVien VALUES('NV011', 'Nguyen Thanh Hoang', 'Nu', TO_DATE('17-06-1988','dd/mm/yyyy'), '1234', 'Binh Dinh', '0123456789', 'CSYT001', N'Nghien cuu', 'K001');
+INSERT INTO SOYTEX.NhanVien VALUES('NV012', 'Nguyen Thanh Thuy', 'Nu', TO_DATE('17-06-1988','dd/mm/yyyy'), '1234', 'Binh Dinh', '0123456789', 'CSYT001', N'Nghien cuu', 'K002');
+INSERT INTO SOYTEX.NhanVien VALUES('NV013', 'Nguyen Nhat Huy', 'Nu', TO_DATE('17-06-1988','dd/mm/yyyy'), '1234', 'Binh Dinh', '0123456789', 'CSYT001', N'Nghien cuu', 'K003');
+INSERT INTO SOYTEX.NhanVien VALUES('NV014', 'Nguyen Tam Dung', 'Nam', TO_DATE('17-06-1988','dd/mm/yyyy'), '1234', 'Binh Dinh', '0123456789', 'CSYT002', N'Co so y te', NULL);
+INSERT INTO SOYTEX.NhanVien VALUES('NV015', 'Nguyen Lam Nhat', 'Nam', TO_DATE('17-06-1988','dd/mm/yyyy'), '1234', 'Binh Thuan', '0123456789', 'CSYT002', N'Thanh tra', NULL);
+INSERT INTO SOYTEX.NhanVien VALUES('NV016', 'Nguyen Quang Tu', 'Nam', TO_DATE('17-06-1988','dd/mm/yyyy'), '1234', 'Binh Thuan', '0123456789', 'CSYT002', N'Thanh tra', NULL);
+INSERT INTO SOYTEX.NhanVien VALUES('NV017', 'Nguyen Nhat Hoa', 'Nam', TO_DATE('17-06-1988','dd/mm/yyyy'), '1234', 'Binh Thuan', '0123456789', 'CSYT002', N'Thanh tra', NULL);
+INSERT INTO SOYTEX.NhanVien VALUES('NV018', 'Nguyen Minh Tu', 'Nu', TO_DATE('17-06-1988','dd/mm/yyyy'), '1234', 'Binh Dinh', '0123456789', 'CSYT002', N'Y si/ Bac si', 'K001');
+INSERT INTO SOYTEX.NhanVien VALUES('NV019', 'Nguyen Hoang Thuy', 'Nu', TO_DATE('17-06-1988','dd/mm/yyyy'), '1234', 'Binh Dinh', '0123456789', 'CSYT002', N'Y si/ Bac si', 'K001');
+INSERT INTO SOYTEX.NhanVien VALUES('NV020', 'Nguyen Kieu Trinh', 'Nu', TO_DATE('17-06-1988','dd/mm/yyyy'), '1234', 'Binh Dinh', '0123456789', 'CSYT002', N'Y si/ Bac si', 'K002');
+INSERT INTO SOYTEX.NhanVien VALUES('NV021', 'Nguyen Minh Lieu', 'Nu', TO_DATE('17-06-1988','dd/mm/yyyy'), '1234', 'Binh Dinh', '0123456789', 'CSYT002', N'Y si/ Bac si', 'K002');
+INSERT INTO SOYTEX.NhanVien VALUES('NV022', 'Nguyen Thuy Trinh', 'Nu', TO_DATE('17-06-1988','dd/mm/yyyy'), '1234', 'Binh Dinh', '0123456789', 'CSYT002', N'Y si/ Bac si', 'K003');
+INSERT INTO SOYTEX.NhanVien VALUES('NV023', 'Nguyen Minh Tu', 'Nu', TO_DATE('17-06-1988','dd/mm/yyyy'), '1234', 'Binh Dinh', '0123456789', 'CSYT002', N'Y si/ Bac si', 'K003');
+INSERT INTO SOYTEX.NhanVien VALUES('NV024', 'Nguyen Thanh Nga', 'Nu', TO_DATE('17-06-1988','dd/mm/yyyy'), '1234', 'Binh Dinh', '0123456789', 'CSYT002', N'Nghien cuu', 'K001');
+INSERT INTO SOYTEX.NhanVien VALUES('NV025', 'Nguyen Nga', 'Nu', TO_DATE('17-06-1988','dd/mm/yyyy'), '1234', 'Binh Dinh', '0123456789', 'CSYT002', N'Nghien cuu', 'K002');
+INSERT INTO SOYTEX.NhanVien VALUES('NV026', 'Nguyen Thuy Tien', 'Nu', TO_DATE('17-06-1988','dd/mm/yyyy'), '1234', 'Binh Dinh', '0123456789', 'CSYT002', N'Nghien cuu', 'K003');
 
 INSERT INTO SOYTEX.BenhNhan VALUES('BN001', 'CSYT001', 'Nguyen Quang An', '123456789', TO_DATE('17-06-2001','dd/mm/yyyy'), '10', 'Nguyen Hue', 'Quan 1', 'TP Ho Chi Minh', 'Bi benh', 'Khong', 'Khong');
 INSERT INTO SOYTEX.BenhNhan VALUES('BN002', 'CSYT001', 'Nguyen Thi Ngoc Mai', '123456789', TO_DATE('17-06-2001','dd/mm/yyyy'), '10', 'Nguyen Hue', 'Quan 1', 'TP Ho Chi Minh', 'Bi benh', 'Khong', 'Khong');

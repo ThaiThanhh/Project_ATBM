@@ -63,24 +63,15 @@ namespace Project_ATBM
                 //add user
                 try
                 {
-                    OracleCommand cmd_add_role = new OracleCommand();
-                    cmd_add_role.Connection = con;
-                    cmd_add_role.CommandText = "soytex.Create_Role";
-                    cmd_add_role.CommandType = CommandType.StoredProcedure;
-                    if (txtrolename.Text == null)
-                    {
-                        cmd_add_role.Parameters.Add(":rolename", txtrolename.Text.ToUpper());
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Đã thêm role mới");
-                    }
-                    else
-                    {
 
-                        cmd_add_role.Parameters.Add(new OracleParameter("role_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = txtrolename.Text.ToUpper();
-                        cmd_add_role.Parameters.Add(new OracleParameter("identity_mode", OracleDbType.Varchar2, ParameterDirection.Input)).Value = txtidentitymode.Text;
-                        cmd_add_role.ExecuteNonQuery();
-                        MessageBox.Show("Đã thêm role mới");
-                    }
+                    OracleCommand cmd_add_role = new OracleCommand();
+                    cmd_add_role.CommandType = CommandType.Text;
+                    cmd_add_role.CommandText = "alter session set \"_ORACLE_SCRIPT\"=true;\n ";
+                    cmd_add_role.CommandText += "create role :role_name identified by :pass";
+                    cmd_add_role.Parameters.Add(":role_name", txtrolename.Text);
+                    cmd_add_role.Parameters.Add(":pass", txtidentitymode.Text);
+                    cmd_add_role.Connection = con;
+                    cmd_add_role.ExecuteNonQuery();                 
                 }
                 catch (Exception ex)
                 {
