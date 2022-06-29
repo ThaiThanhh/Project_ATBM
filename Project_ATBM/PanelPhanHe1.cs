@@ -34,6 +34,11 @@ namespace Project_ATBM
 
         }
 
-      
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AdminSOYTEX form = new AdminSOYTEX();
+            this.Hide();
+            form.Show();
+        }
     }
 }

@@ -87,11 +87,29 @@
     <Compile Include="AddRole.Designer.cs">
       <DependentUpon>AddRole.cs</DependentUpon>
     </Compile>
+    <Compile Include="addStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addStaff.Designer.cs">
+      <DependentUpon>addStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddUser.Designer.cs">
       <DependentUpon>AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.Designer.cs">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSOYTEX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSOYTEX.Designer.cs">
+      <DependentUpon>AdminSOYTEX.cs</DependentUpon>
     </Compile>
     <Compile Include="BacSi.cs">
       <SubType>Form</SubType>
@@ -211,8 +229,17 @@
     <EmbeddedResource Include="AddRole.resx">
       <DependentUpon>AddRole.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="addStaff.resx">
+      <DependentUpon>addStaff.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminLogin.resx">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSOYTEX.resx">
+      <DependentUpon>AdminSOYTEX.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BacSi.resx">
       <DependentUpon>BacSi.cs</DependentUpon>

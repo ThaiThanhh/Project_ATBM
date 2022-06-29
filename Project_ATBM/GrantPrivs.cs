@@ -77,7 +77,7 @@ namespace Project_ATBM
                 {
                     OracleCommand cmd_grant_privs = new OracleCommand();
                     cmd_grant_privs.Connection = con;
-                    cmd_grant_privs.CommandText = "Grant_Privs_To_Role";
+                    cmd_grant_privs.CommandText = "soytex.Grant_Privs_To_Role";
                     cmd_grant_privs.CommandType = CommandType.StoredProcedure;
                     if (txt_rolename.Text == null)
                     {

@@ -20,7 +20,7 @@ namespace Project_ATBM
 
         private void btn_phanhe1_Click(object sender, EventArgs e)
         {
-            PanelPhanHe1 form = new PanelPhanHe1();
+            AdminLogin form = new AdminLogin();
             form.Show();
         }
 

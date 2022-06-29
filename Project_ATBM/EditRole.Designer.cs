@@ -39,56 +39,60 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(92, 43);
+            this.label1.Location = new System.Drawing.Point(119, 107);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 16);
+            this.label1.Size = new System.Drawing.Size(86, 20);
             this.label1.TabIndex = 15;
             this.label1.Text = "Role name";
-            //this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(84, 108);
+            this.label2.Location = new System.Drawing.Point(109, 188);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 16);
+            this.label2.Size = new System.Drawing.Size(130, 20);
             this.label2.TabIndex = 10;
             this.label2.Text = "Nhập identity mới";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtidentitymode
             // 
             this.txtidentitymode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtidentitymode.Location = new System.Drawing.Point(247, 100);
-            this.txtidentitymode.Margin = new System.Windows.Forms.Padding(4);
+            this.txtidentitymode.Location = new System.Drawing.Point(293, 178);
+            this.txtidentitymode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtidentitymode.Name = "txtidentitymode";
-            this.txtidentitymode.Size = new System.Drawing.Size(245, 30);
+            this.txtidentitymode.Size = new System.Drawing.Size(275, 35);
             this.txtidentitymode.TabIndex = 8;
+            this.txtidentitymode.TextChanged += new System.EventHandler(this.txtidentitymode_TextChanged);
             // 
             // txt_rolename
             // 
             this.txt_rolename.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_rolename.Location = new System.Drawing.Point(247, 35);
-            this.txt_rolename.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_rolename.Location = new System.Drawing.Point(293, 97);
+            this.txt_rolename.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_rolename.Name = "txt_rolename";
-            this.txt_rolename.Size = new System.Drawing.Size(245, 30);
+            this.txt_rolename.Size = new System.Drawing.Size(275, 35);
             this.txt_rolename.TabIndex = 14;
+            this.txt_rolename.TextChanged += new System.EventHandler(this.txt_rolename_TextChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(234, 186);
+            this.button1.Location = new System.Drawing.Point(278, 285);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 44);
+            this.button1.Size = new System.Drawing.Size(118, 55);
             this.button1.TabIndex = 12;
             this.button1.Text = "Trở về";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(388, 186);
+            this.button2.Location = new System.Drawing.Point(451, 285);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 44);
+            this.button2.Size = new System.Drawing.Size(117, 55);
             this.button2.TabIndex = 13;
             this.button2.Text = "Chỉnh sửa";
             this.button2.UseVisualStyleBackColor = true;
@@ -96,9 +100,9 @@
             // 
             // EditRole
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(764, 424);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.txt_rolename);

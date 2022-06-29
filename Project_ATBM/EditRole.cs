@@ -19,7 +19,7 @@ namespace Project_ATBM
               (SERVER = DEDICATED)
               (SERVICE_NAME = XE)
             )
-            );DBA Privilege=SYSDBA; User Id = SYS;password=1";
+            );User Id = DB_ADMIN;password=1234";
         public EditRole()
         {
             InitializeComponent();
@@ -57,7 +57,7 @@ namespace Project_ATBM
                 {
                     OracleCommand cmd_edit_role = new OracleCommand();
                     cmd_edit_role.Connection = con;
-                    cmd_edit_role.CommandText = "Alter_Role";
+                    cmd_edit_role.CommandText = "soytex.Alter_Role";
                     cmd_edit_role.CommandType = CommandType.StoredProcedure;
                     if (txtidentitymode.Text == null)
                     {
@@ -83,6 +83,31 @@ namespace Project_ATBM
         }
 
         private void EditRole_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_rolename_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtidentitymode_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

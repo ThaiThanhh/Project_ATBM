@@ -36,6 +36,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,7 +45,7 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(502, 40);
+            this.dataGridView1.Location = new System.Drawing.Point(496, 110);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -56,7 +57,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(68, 193);
+            this.button1.Location = new System.Drawing.Point(66, 293);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 50);
             this.button1.TabIndex = 11;
@@ -66,7 +67,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(191, 193);
+            this.button2.Location = new System.Drawing.Point(189, 293);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(113, 50);
             this.button2.TabIndex = 12;
@@ -76,7 +77,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(68, 40);
+            this.button3.Location = new System.Drawing.Point(66, 140);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(368, 50);
             this.button3.TabIndex = 13;
@@ -87,7 +88,7 @@
             // txtusername_search
             // 
             this.txtusername_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtusername_search.Location = new System.Drawing.Point(68, 124);
+            this.txtusername_search.Location = new System.Drawing.Point(66, 224);
             this.txtusername_search.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtusername_search.Name = "txtusername_search";
             this.txtusername_search.Size = new System.Drawing.Size(236, 35);
@@ -95,7 +96,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(323, 122);
+            this.button4.Location = new System.Drawing.Point(321, 222);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(113, 44);
             this.button4.TabIndex = 15;
@@ -105,7 +106,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(323, 193);
+            this.button5.Location = new System.Drawing.Point(321, 293);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(113, 50);
             this.button5.TabIndex = 16;
@@ -115,17 +116,30 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(68, 280);
+            this.button6.Location = new System.Drawing.Point(66, 380);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(216, 47);
+            this.button6.Size = new System.Drawing.Size(368, 47);
             this.button6.TabIndex = 17;
             this.button6.Text = "Xem danh sách quyền";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
+            this.label1.Location = new System.Drawing.Point(424, 40);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(270, 40);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "QUẢN LÝ USER";
+            // 
             // QLyUser
             // 
             this.ClientSize = new System.Drawing.Size(1178, 544);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -151,5 +165,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label1;
     }
 }

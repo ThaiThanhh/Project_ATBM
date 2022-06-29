@@ -19,7 +19,7 @@ namespace Project_ATBM
               (SERVER = DEDICATED)
               (SERVICE_NAME = XE)
             )
-            );DBA Privilege=SYSDBA; User Id = SYS;password=1";
+            );User Id = DB_ADMIN;password=1234";
         public PrivsManage(string username)
         {
             InitializeComponent();
@@ -31,9 +31,9 @@ namespace Project_ATBM
             {
                 OracleCommand cmd_drop_user = new OracleCommand();
                 cmd_drop_user.Connection = con;
-                cmd_drop_user.CommandText = "proc_privs_information";
-                cmd_drop_user.CommandType = CommandType.StoredProcedure;
-                cmd_drop_user.Parameters.Add(new OracleParameter("user_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = username;
+                cmd_drop_user.CommandText = "select * from dba_tab_privs where grantee = :user_name";
+                cmd_drop_user.CommandType = CommandType.Text;
+                cmd_drop_user.Parameters.Add(new OracleParameter("user_name", OracleDbType.Varchar2)).Value = username;
                 OracleDataReader user = cmd_drop_user.ExecuteReader();
                 DataTable tableUserList = new DataTable();
 
@@ -67,7 +67,7 @@ namespace Project_ATBM
               
                 OracleCommand cmd_drop_user = new OracleCommand();
                 cmd_drop_user.Connection = con;
-                cmd_drop_user.CommandText = "proc_revoke_privilege";
+                cmd_drop_user.CommandText = "soytex.proc_revoke_privilege";
                 cmd_drop_user.CommandType = CommandType.StoredProcedure;
                 cmd_drop_user.Parameters.Add(new OracleParameter("user_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = user_name;
                 cmd_drop_user.Parameters.Add(new OracleParameter("p_table", OracleDbType.Varchar2, ParameterDirection.Input)).Value = table;
@@ -130,9 +130,9 @@ namespace Project_ATBM
             string username = label1.Text.Trim().ToUpper();
             OracleCommand cmd_drop_user = new OracleCommand();
             cmd_drop_user.Connection = con;
-            cmd_drop_user.CommandText = "proc_role_of_user";
-            cmd_drop_user.CommandType = CommandType.StoredProcedure;
-            cmd_drop_user.Parameters.Add(new OracleParameter("user_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = username;
+            cmd_drop_user.CommandText = " select * from DBA_ROLE_PRIVS  where grantee = :user_name";
+            cmd_drop_user.CommandType = CommandType.Text;
+            cmd_drop_user.Parameters.Add(new OracleParameter("user_name", OracleDbType.Varchar2)).Value = username;
             OracleDataReader user = cmd_drop_user.ExecuteReader();
             DataTable tableUserList = new DataTable();
 
@@ -153,9 +153,9 @@ namespace Project_ATBM
             string username = label1.Text.Trim().ToUpper();
             OracleCommand cmd_drop_user = new OracleCommand();
             cmd_drop_user.Connection = con;
-            cmd_drop_user.CommandText = "proc_privs_information";
-            cmd_drop_user.CommandType = CommandType.StoredProcedure;
-            cmd_drop_user.Parameters.Add(new OracleParameter("user_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = username;
+            cmd_drop_user.CommandText = "select * from dba_tab_privs where grantee = :user_name";
+            cmd_drop_user.CommandType = CommandType.Text;
+            cmd_drop_user.Parameters.Add(new OracleParameter("user_name", OracleDbType.Varchar2)).Value = username;
             OracleDataReader user = cmd_drop_user.ExecuteReader();
             DataTable tableUserList = new DataTable();
 
@@ -181,7 +181,7 @@ namespace Project_ATBM
                 
                 OracleCommand cmd_drop_user = new OracleCommand();
                 cmd_drop_user.Connection = con;
-                cmd_drop_user.CommandText = "proc_revoke_role";
+                cmd_drop_user.CommandText = "soytex.proc_revoke_role";
                 cmd_drop_user.CommandType = CommandType.StoredProcedure;
                 cmd_drop_user.Parameters.Add(new OracleParameter("user_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = user_name;
                 cmd_drop_user.Parameters.Add(new OracleParameter("role_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = role_name;
