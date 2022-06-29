@@ -1,4 +1,5 @@
 --Tao mot bang de luu key--
+DROP TABLE KEY;
 CREATE TABLE KEY
 (
   NAME   VARCHAR2(100 BYTE),

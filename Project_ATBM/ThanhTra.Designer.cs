@@ -33,7 +33,6 @@
             this.ThanhTra_dataGridView = new System.Windows.Forms.DataGridView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.buttonShowProfile = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ThanhTra_dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -102,24 +101,11 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Xem dữ liệu ";
             // 
-            // buttonShowProfile
-            // 
-            this.buttonShowProfile.AutoSize = true;
-            this.buttonShowProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonShowProfile.Location = new System.Drawing.Point(335, 527);
-            this.buttonShowProfile.Name = "buttonShowProfile";
-            this.buttonShowProfile.Size = new System.Drawing.Size(238, 35);
-            this.buttonShowProfile.TabIndex = 42;
-            this.buttonShowProfile.Text = "Xem thông tin cá nhân";
-            this.buttonShowProfile.UseVisualStyleBackColor = true;
-            this.buttonShowProfile.Click += new System.EventHandler(this.buttonShowProfile_Click);
-            // 
             // ThanhTra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(908, 574);
-            this.Controls.Add(this.buttonShowProfile);
+            this.ClientSize = new System.Drawing.Size(908, 543);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel1);
@@ -141,6 +127,5 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Header;
-        private System.Windows.Forms.Button buttonShowProfile;
     }
 }

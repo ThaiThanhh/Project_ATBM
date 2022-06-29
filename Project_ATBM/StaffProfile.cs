@@ -92,7 +92,7 @@ namespace Project_ATBM
                 cmd.Parameters.Add(new OracleParameter("p_VaiTro", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxPosition.Text;
                 cmd.Parameters.Add(new OracleParameter("p_ChuyenKhoa", OracleDbType.Varchar2, ParameterDirection.Input)).Value = textBoxMajor.Text;
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Đã thêm cập nhật thông tin nhân viên", "", MessageBoxButtons.OK);
+                MessageBox.Show("Đã cập nhật thông tin nhân viên", "", MessageBoxButtons.OK);
             }
             catch (Exception ex)
             {

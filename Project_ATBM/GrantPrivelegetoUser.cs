@@ -20,7 +20,7 @@ namespace Project_ATBM
               (SERVER = DEDICATED)
               (SERVICE_NAME = XE)
             )
-            );DBA Privilege=SYSDBA; User Id = SYS;password=1";
+            );User Id = DB_ADMIN;password=1234";
 
         
 
@@ -74,7 +74,7 @@ namespace Project_ATBM
             {
                 OracleCommand cmd_drop_user = new OracleCommand();
                 cmd_drop_user.Connection = con;
-                cmd_drop_user.CommandText = "proc_grant_priv";
+                cmd_drop_user.CommandText = "SOYTEX.proc_grant_priv";
                 cmd_drop_user.CommandType = CommandType.StoredProcedure;
                 cmd_drop_user.Parameters.Add(new OracleParameter("user_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = user_name;
                 cmd_drop_user.Parameters.Add(new OracleParameter("p_table", OracleDbType.Varchar2, ParameterDirection.Input)).Value = table;

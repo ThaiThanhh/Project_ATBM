@@ -5,7 +5,7 @@ GRANT DBA TO DB_ADMIN;
 GRANT EXECUTE ON soytex.proc_add_user TO DB_ADMIN;
 GRANT EXECUTE ON soytex.proc_drop_user TO DB_ADMIN;
 GRANT EXECUTE ON soytex.proc_grant_priv TO DB_ADMIN;
-GRANT EXECUTE ON soytex.proc_grant_role TO DB_ADMIN;
+GRANT EXECUTE ON proc_grant_role TO DB_ADMIN;
 GRANT EXECUTE ON soytex.proc_revoke_privilege TO DB_ADMIN;
 GRANT EXECUTE ON soytex.proc_revoke_role TO DB_ADMIN;
 
@@ -14,6 +14,7 @@ GRANT EXECUTE ON soytex.Alter_Role TO DB_ADMIN;
 GRANT EXECUTE ON soytex.Drop_Role TO DB_ADMIN;
 GRANT EXECUTE ON soytex.Grant_Privs_To_Role TO DB_ADMIN;
 GRANT EXECUTE ON soytex.Revoke_Role_Privs TO DB_ADMIN;
+GRANT EXECUTE ANY PROCEDURE TO DB_ADMIN;
 
 --PHAN QUYEN (DAC)
 GRANT INSERT ON SOYTEX.HSBA TO CSYT;
@@ -354,6 +355,44 @@ begin
         policy_function => 'PROHIBIT_UPDATE_MABN',
         statement_types => 'update',
         sec_relevant_cols => 'MABN',
+        update_check => true
+    );
+end;
+
+CREATE OR REPLACE FUNCTION update_NV_TT(p_schema varchar2, p_obj varchar2)
+RETURN NVARCHAR2
+AS
+    CURSOR CUR IS (SELECT granted_role
+                    FROM dba_role_privs
+                    WHERE grantee = SYS_CONTEXT('userenv', 'SESSION_USER'));
+    usr NVARCHAR2(100);
+    user_role NVARCHAR2(100);
+Begin
+    usr := SYS_CONTEXT('userenv', 'SESSION_USER');
+    
+    OPEN CUR;
+    LOOP
+        FETCH CUR INTO user_role;
+        EXIT WHEN CUR%NOTFOUND;
+            
+        if (user_role = 'THANHTRA') then
+            return 'MANV = '''|| usr ||'''';
+        end if;
+    END LOOP;
+    
+    CLOSE CUR;
+    
+    return '1 = 1';
+End;
+
+begin
+    DBMS_RLS.add_policy
+    (
+        object_schema => 'SOYTEX',
+        object_name => 'NHANVIEN',
+        policy_name => 'TC#6_PC1#',
+        policy_function => 'update_NV_TT',
+        statement_types => 'update',
         update_check => true
     );
 end;

@@ -181,7 +181,7 @@ namespace Project_ATBM
                 
                 OracleCommand cmd_drop_user = new OracleCommand();
                 cmd_drop_user.Connection = con;
-                cmd_drop_user.CommandText = "soytex.proc_revoke_role";
+                cmd_drop_user.CommandText = "SYS.proc_revoke_role";
                 cmd_drop_user.CommandType = CommandType.StoredProcedure;
                 cmd_drop_user.Parameters.Add(new OracleParameter("user_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = user_name;
                 cmd_drop_user.Parameters.Add(new OracleParameter("role_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = role_name;
