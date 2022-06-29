@@ -158,6 +158,12 @@
     <Compile Include="PanelPhanHe1.Designer.cs">
       <DependentUpon>PanelPhanHe1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Patient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient.Designer.cs">
+      <DependentUpon>Patient.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrivsManage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PanelPhanHe1.resx">
       <DependentUpon>PanelPhanHe1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient.resx">
+      <DependentUpon>Patient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrivsManage.resx">
       <DependentUpon>PrivsManage.cs</DependentUpon>
