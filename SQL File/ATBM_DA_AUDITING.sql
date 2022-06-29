@@ -23,14 +23,22 @@ ACTIONS INSERT ON SOYTEX.BENHNHAN;
 
 AUDIT POLICY insert_benhnhan_pol;
 
---
+-- audit khi user xoa du lieu treb bang hsba và hsba_dv
 CREATE AUDIT POLICY delete_hsba_pol
 ACTIONS DELETE ON SOYTEX.HSBA,
         DELETE ON SOYTEX.HSBA_DV;
 
 AUDIT POLICY delete_hsba_pol;
 
---
+-- audit khi nguoi dung select khong thanh cong hsba hoac hsba dich vu
+CREATE AUDIT POLICY select_hsba_pol
+ACTIONS SELECT ON SOYTEX.HSBA,
+        SELECT ON SOYTEX.HSBA_DV;
+
+AUDIT POLICY select_hsba_pol WHENEVER NOT SUCCESSFUL;
+
+-- Fine-Grained Audit
+-- audit khi nguoi dung update tren VAITRO, CHUYENKHOA trong bang NHANVIEN
 BEGIN
  DBMS_FGA.DROP_POLICY(
     object_schema => 'SOYTEX',
@@ -49,7 +57,7 @@ BEGIN
         );
 END;
 
---
+-- audit khi nguoi dung update tren TIENSUBENH, TIENSUBENHGD, DIUNGTHUOC trong bang BENHNHAN
 BEGIN
  DBMS_FGA.DROP_POLICY(
     object_schema => 'SOYTEX',
@@ -68,7 +76,6 @@ BEGIN
         );
 END;
 
--- Fine-Grained Audit
 -- audit khi nguoi dung truy cap du lieu bang HSBA trong thang hien tai
 BEGIN
  DBMS_FGA.DROP_POLICY(
