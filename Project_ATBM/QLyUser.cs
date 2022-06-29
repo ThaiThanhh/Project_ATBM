@@ -19,7 +19,7 @@ namespace Project_ATBM
               (SERVER = DEDICATED)
               (SERVICE_NAME = XE)
             )
-            );DBA Privilege=SYSDBA; User Id = SYS;password=1";
+            );User Id = DB_ADMIN;password=1234";
 
         public QLyUser()
         {
@@ -107,7 +107,7 @@ namespace Project_ATBM
                 //Drop user
                 OracleCommand cmd_drop_user = new OracleCommand();
                 cmd_drop_user.Connection = con;
-                cmd_drop_user.CommandText = "proc_drop_user";
+                cmd_drop_user.CommandText = "soytex.proc_drop_user ";
                 cmd_drop_user.CommandType = CommandType.StoredProcedure;
                 cmd_drop_user.Parameters.Add(new OracleParameter("user_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = cellValue;
                 cmd_drop_user.ExecuteNonQuery();
@@ -143,9 +143,9 @@ namespace Project_ATBM
                 //Search User
                 OracleCommand cmd_drop_user = new OracleCommand();
                 cmd_drop_user.Connection = con;
-                cmd_drop_user.CommandText = "proc_search_user";
-                cmd_drop_user.CommandType = CommandType.StoredProcedure;
-                cmd_drop_user.Parameters.Add(new OracleParameter("user_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = user_name;
+                cmd_drop_user.CommandText = "SELECT * FROM ALL_USERS WHERE INSTR(USERNAME, :user_name)!=0";
+                cmd_drop_user.CommandType = CommandType.Text;
+                cmd_drop_user.Parameters.Add(new OracleParameter("user_name", OracleDbType.Varchar2)).Value = user_name;
                 OracleDataReader user = cmd_drop_user.ExecuteReader();
                 DataTable tableUserList = new DataTable();
 

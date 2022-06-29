@@ -19,7 +19,7 @@ namespace Project_ATBM
               (SERVER = DEDICATED)
               (SERVICE_NAME = XE)
             )
-            );DBA Privilege=SYSDBA; User Id = SYS;password=oracleqa1409";
+            );User Id = DB_ADMIN;password=1234";
 
         public QuanLyRole()
         {
@@ -106,7 +106,7 @@ namespace Project_ATBM
                 //Drop role
                 OracleCommand cmd_drop_user = new OracleCommand();
                 cmd_drop_user.Connection = con;
-                cmd_drop_user.CommandText = "Drop_Role";
+                cmd_drop_user.CommandText = "soytex.Drop_Role";
                 cmd_drop_user.CommandType = CommandType.StoredProcedure;
                 cmd_drop_user.Parameters.Add(new OracleParameter("role_name", OracleDbType.Varchar2, ParameterDirection.Input)).Value = cellValue;
                 cmd_drop_user.ExecuteNonQuery();

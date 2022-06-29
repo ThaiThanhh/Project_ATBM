@@ -18,7 +18,7 @@ namespace Project_ATBM
               (SERVER = DEDICATED)
               (SERVICE_NAME = XE)
             )
-            );DBA Privilege=SYSDBA; User Id = SYS;password=1";
+            );User Id = DB_ADMIN;password=1234";
         public AddUser()
         {
             InitializeComponent();
@@ -62,7 +62,7 @@ namespace Project_ATBM
                 {
                     OracleCommand cmd_add_user = new OracleCommand();
                     cmd_add_user.Connection = con;
-                    cmd_add_user.CommandText = "proc_add_user";
+                    cmd_add_user.CommandText = "soytex.proc_add_user ";
                     cmd_add_user.CommandType = CommandType.StoredProcedure;
                     if (txtpassword.Text == null)
                     {

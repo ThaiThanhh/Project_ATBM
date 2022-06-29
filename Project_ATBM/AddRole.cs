@@ -20,7 +20,7 @@ namespace Project_ATBM
               (SERVER = DEDICATED)
               (SERVICE_NAME = XE)
             )
-            );DBA Privilege=SYSDBA; User Id = SYS;password=1";
+            );User Id = DB_ADMIN;password=1234";
 
         public AddRole()
         {
@@ -65,7 +65,7 @@ namespace Project_ATBM
                 {
                     OracleCommand cmd_add_role = new OracleCommand();
                     cmd_add_role.Connection = con;
-                    cmd_add_role.CommandText = "Create_Role";
+                    cmd_add_role.CommandText = "soytex.Create_Role";
                     cmd_add_role.CommandType = CommandType.StoredProcedure;
                     if (txtrolename.Text == null)
                     {

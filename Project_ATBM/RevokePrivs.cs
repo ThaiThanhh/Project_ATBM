@@ -19,7 +19,7 @@ namespace Project_ATBM
               (SERVER = DEDICATED)
               (SERVICE_NAME = XE)
             )
-            );DBA Privilege=SYSDBA; User Id = SYS;password=1";
+            ); User Id =DB_ADMIN;password=1234";
         public RevokePrivs()
         {
             InitializeComponent();
@@ -78,7 +78,7 @@ namespace Project_ATBM
                 {
                     OracleCommand cmd_revole_privs = new OracleCommand();
                     cmd_revole_privs.Connection = con;
-                    cmd_revole_privs.CommandText = "Revoke_Role_Privs";
+                    cmd_revole_privs.CommandText = "soytex.Revoke_Role_Privs";
                     cmd_revole_privs.CommandType = CommandType.StoredProcedure;
                     if (txt_rolename.Text == null)
                     {
