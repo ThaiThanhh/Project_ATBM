@@ -221,6 +221,7 @@ Begin
     
     if (usr = 'DB_ADMIN') then
         return '1 = 1';
+    end if;
         
     OPEN CUR;
     LOOP
