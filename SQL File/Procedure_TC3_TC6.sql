@@ -52,12 +52,5 @@ BEGIN
     EXECUTE IMMEDIATE ( tmp_query );
 END;
 
-SELECT * FROM SOYTEX.HSBA;
-SELECT * FROM SOYTEX.BenhNhan;
 
-EXEC SOYTEX.proc_insert_HSBA('HSBA005', 'BN001', '12-JUN-22', 'CHO QUANG AN', 'NV003', 'K001', 'CSYT001', 'KHUNG'); 
-EXEC SOYTEX.proc_update_BenhNhan('CSYT001', 'MAI XINH DEP', '123456789', '12-JUN-22', '1', 'Ngo Quyen', 'Quan 1', 'Tp Ho Chi Minh', 'BI KHUM', 'BI XINH XAN', 'Khong'); 
-EXEC SOYTEX.proc_update_BenhNhan('MAI XINH DEP', 'NU', '123456789', '12-JUN-22', '1', 'Ngo Quyen', 'Quan 1', 'Tp Ho Chi Minh', 'BI KHUM', 'BI XINH XAN', 'Khong'); 
-     
-DELETE SOYTEX.HSBA WHERE MaHSBA = 'HSBA005'
 
